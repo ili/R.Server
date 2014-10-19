@@ -1,3 +1,4 @@
+using System.Linq;
 #pragma warning disable 1692
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace R.Server.Common
 			_descriptors = 
 				config
 					.DBDescriptors
-					.Convert2Dictionary(
+					.ToDictionary(
 						desc =>
 						{
 							if (string.IsNullOrEmpty(desc.Name))

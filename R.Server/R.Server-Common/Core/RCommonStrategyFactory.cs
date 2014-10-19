@@ -13,14 +13,20 @@ namespace R.Server.Common
 		/// </summary>
 		public IExtensionAttachmentStrategy[] CreateStrategies(IServiceProvider provider)
 		{
+			if(provider == null)
+				throw new ArgumentNullException("provider");
+
 			var publisher = provider.GetService<IServicePublisher>();
+			if (publisher == null)
+				throw new InvalidOperationException("Service publisher is not registered");
+
 			return
 				new IExtensionAttachmentStrategy[]
 				{
 					new LogTargetsRegStrategy(publisher),
 					new TaskRegStrategy(publisher),
 					new DBDriverRegStrategy(publisher),
-					new ServicePublishingStrategy(publisher),
+					ServicesHelper.CreateServiceStrategy(publisher),
 					new RegSecurityPolicyStrategy(publisher)
 				};
 		}

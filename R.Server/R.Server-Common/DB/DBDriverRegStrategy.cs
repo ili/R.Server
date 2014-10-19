@@ -17,10 +17,10 @@ namespace R.Server.Common
 		/// Создать элемент.
 		/// </summary>
 		public override DBDriverInfo CreateElement(
-			IExtensionAttachmentContext<Type, Attribute> context,
+			ExtensionAttachmentContext context,
 			DBDriverAttribute attr)
 		{
-			return new DBDriverInfo(attr.Name, context.ExtensionType);
+			return new DBDriverInfo(attr.Name, context.Type);
 		}
 	}
 }

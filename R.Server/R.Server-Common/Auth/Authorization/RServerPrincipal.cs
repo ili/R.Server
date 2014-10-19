@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Principal;
 
 using R.Server.ServerModel;
@@ -15,7 +16,7 @@ namespace R.Server.Common
 		public RServerPrincipal(IRServerIdentity identity, IEnumerable<string> roles)
 		{
 			_identity = identity;
-			_roles = roles.Convert2Dictionary(value => value);
+			_roles = roles.ToDictionary(value => value);
 		}
 
 		public IRServerIdentity identity

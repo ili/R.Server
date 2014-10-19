@@ -6,7 +6,7 @@ namespace R.Server.ServerModel
 {
 	public class TaskInfo : NamedElementInfo
 	{
-		public TaskInfo(string taskName, Type taskType) : base(taskName, "", taskType)
+		public TaskInfo(string taskName, Type taskType) : base(taskName, taskType)
 		{
 		}
 	}

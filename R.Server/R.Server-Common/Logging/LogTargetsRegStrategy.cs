@@ -17,13 +17,13 @@ namespace R.Server.Common
 		/// Создать элемент.
 		/// </summary>
 		public override LogTargetInfo CreateElement(
-			IExtensionAttachmentContext<Type, Attribute> context,
+			ExtensionAttachmentContext context,
 			LogTargetAttribute attr)
 		{
-			if (!typeof (ILogTarget).IsAssignableFrom(context.ExtensionType))
+			if (!typeof (ILogTarget).IsAssignableFrom(context.Type))
 				throw new ArgumentException("Log target must implement '" + typeof (ILogTarget).FullName
 					+ "' interface.");
-			return new LogTargetInfo(attr.Name, context.ExtensionType);
+			return new LogTargetInfo(attr.Name, context.Type);
 		}
 	}
 }

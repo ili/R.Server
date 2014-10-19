@@ -17,13 +17,13 @@ namespace R.Server.Common
 		/// Создать элемент.
 		/// </summary>
 		public override AuthorizationProviderInfo CreateElement(
-			IExtensionAttachmentContext<Type, Attribute> context,
+			ExtensionAttachmentContext context,
 			AuthorizationProviderAttribute attr)
 		{
-			if (!typeof (IAuthorizationProvider).IsAssignableFrom(context.ExtensionType))
+			if (!typeof (IAuthorizationProvider).IsAssignableFrom(context.Type))
 				throw new ArgumentException("Authentication provider must implement '"
 					+ typeof (IAuthorizationProvider).FullName + "' interface.");
-			return new AuthorizationProviderInfo(attr.Name, context.ExtensionType);
+			return new AuthorizationProviderInfo(attr.Name, context.Type);
 		}
 	}
 }

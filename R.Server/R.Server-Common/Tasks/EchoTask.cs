@@ -1,5 +1,5 @@
 using System;
-
+using System.Linq;
 using R.Server.ClientModel;
 using R.Server.ServerModel;
 
@@ -28,7 +28,7 @@ namespace R.Server.Common
 		#region ITask Members
 		public string Run(TaskParameter[] taskParams)
 		{
-			var tpDic = taskParams.Convert2Dictionary(tp => tp.Name);
+			var tpDic = taskParams.ToDictionary(tp => tp.Name);
 			if (!tpDic.ContainsKey(MessageParamName))
 				throw new ArgumentException("Required parameter '" + MessageParamName + "' not supplied");
 			if (tpDic.ContainsKey(LogParamName))

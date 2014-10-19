@@ -17,10 +17,10 @@ namespace R.Server.Common
 		/// Создать элемент.
 		/// </summary>
 		public override CommServiceInfo CreateElement(
-			IExtensionAttachmentContext<Type, Attribute> context,
+			ExtensionAttachmentContext context,
 			CommServiceAttribute attr)
 		{
-			return new CommServiceInfo(attr.Name, context.ExtensionType, attr.ContractType);
+			return new CommServiceInfo(attr.Name, context.Type, attr.ContractType);
 		}
 	}
 }

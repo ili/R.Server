@@ -17,14 +17,14 @@ namespace R.Server.Common
 		/// Создать элемент.
 		/// </summary>
 		public override CommTransportProviderInfo CreateElement(
-			IExtensionAttachmentContext<Type, Attribute> context,
+			ExtensionAttachmentContext context,
 			CommTransportProviderAttribute attr)
 		{
 			var provContract = typeof (ICommTransportProvider);
-			if (!provContract.IsAssignableFrom(context.ExtensionType))
+			if (!provContract.IsAssignableFrom(context.Type))
 				throw new ArgumentException("Communication transport provider must implement '"
 					+ provContract.FullName + "' interface");
-			return new CommTransportProviderInfo(attr.Name, context.ExtensionType);
+			return new CommTransportProviderInfo(attr.Name, context.Type);
 		}
 	}
 }

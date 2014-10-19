@@ -1,5 +1,5 @@
-﻿#pragma warning disable 1692
-
+﻿using System.Linq;
+#pragma warning disable 1692
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,7 +31,7 @@ namespace R.Server.Common
 			using (var writer = CreateWriter())
 				writer.WriteLine("   ---   New server session started at {0}", DateTime.Now);
 
-			_parameters = targetParams.Convert2Dictionary(prm => prm.Name);
+			_parameters = targetParams.ToDictionary(prm => prm.Name);
 			if (!_parameters.ContainsKey(PathParamName))
 			{
 				logger.LogEvent(new LogEventInfo(

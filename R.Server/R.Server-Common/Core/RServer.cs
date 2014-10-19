@@ -101,14 +101,14 @@ namespace R.Server.Common
 				asmHelper.AddAssembly(asm);
 			}
 
-			extMgr.Scan(asmHelper.GetTypes(), new ConfigSectionStrategy(_serviceManager));
+			extMgr.Scan(new ConfigSectionStrategy(_serviceManager), asmHelper.GetTypes());
 			InitConfig();
 			_config =
 				_serviceManager
 					.GetRequiredService<IConfigService>()
 					.GetSection<IRServerConfig>();
 
-			extMgr.Scan(asmHelper.GetTypes(), new StrategyFactoryStrategy(_serviceManager));
+			extMgr.Scan(new StrategyFactoryStrategy(_serviceManager), asmHelper.GetTypes());
 			StrategyFactoryStrategy
 				.ScanWithAllFactories(
 					_serviceManager,

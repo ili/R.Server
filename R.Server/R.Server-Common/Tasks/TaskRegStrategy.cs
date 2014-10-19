@@ -16,10 +16,10 @@ namespace R.Server.Common
 		/// Создать элемент.
 		/// </summary>
 		public override TaskInfo CreateElement(
-			IExtensionAttachmentContext<Type, Attribute> context,
+			ExtensionAttachmentContext context,
 			TaskAttribute attr)
 		{
-			return new TaskInfo(attr.Name, context.ExtensionType);
+			return new TaskInfo(attr.Name, context.Type);
 		}
 	}
 }

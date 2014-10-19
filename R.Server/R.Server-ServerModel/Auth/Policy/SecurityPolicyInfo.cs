@@ -7,7 +7,7 @@ namespace R.Server.ServerModel
 	public class SecurityPolicyInfo : NamedElementInfo
 	{
 		public SecurityPolicyInfo(string name, Type type, Type[] contextTypes)
-			: base(name, "", type)
+			: base(name, type)
 		{
 			ContextTypes = contextTypes;
 		}

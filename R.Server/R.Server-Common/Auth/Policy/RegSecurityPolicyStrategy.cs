@@ -15,17 +15,17 @@ namespace R.Server.Common
 		}
 
 		public override SecurityPolicyInfo CreateElement(
-			IExtensionAttachmentContext<Type, Attribute> context,
+			ExtensionAttachmentContext context,
 			SecurityPolicyAttribute attr)
 		{
-			if (context.ExtensionType.IsGenericTypeDefinition)
+			if (context.Type.IsGenericTypeDefinition)
 				throw new ArgumentException("Generic type definitions not supported");
-			var ifaces = context.ExtensionType.GetInterfaces().Where(
+			var ifaces = context.Type.GetInterfaces().Where(
 				iface => iface.GetGenericTypeDefinition() == typeof (ISecurityPolicy<>)).ToArray();
 			if (ifaces.Length == 0)
 				throw new ArgumentException("Security policy must implement at least one of generic "
 					+ "interfaces, based on '" + typeof (ISecurityPolicy<>).FullName + "' type definition");
-			return new SecurityPolicyInfo(attr.Name, context.ExtensionType,
+			return new SecurityPolicyInfo(attr.Name, context.Type,
 				ifaces.ConvertAll(iface => iface.GetGenericArguments()[0]));
 		}
 	}

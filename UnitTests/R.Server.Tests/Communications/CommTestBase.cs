@@ -15,8 +15,7 @@ namespace Tests.Communications
 		{
 			_svcMgr = new ServiceManager();
 			var extMgr = new ExtensionManager(_svcMgr);
-			extMgr.Scan(typeof (CommTransportRegStrategy).Assembly.GetTypes(),
-				new CommTransportRegStrategy(_svcMgr));
+			extMgr.Scan(new CommTransportRegStrategy(_svcMgr), typeof (CommTransportRegStrategy).Assembly.GetTypes());
 			_svcMgr.Publish<ICommTransportManager>(new CommTransportManager(_svcMgr));
 			_proxyMgr = new ProxyManager(
 				_svcMgr,

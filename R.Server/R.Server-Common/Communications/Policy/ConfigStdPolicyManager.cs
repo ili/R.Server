@@ -1,5 +1,5 @@
+using System.Linq;
 #pragma warning disable 1692
-
 using System;
 using System.Collections.Generic;
 using System.Security.Principal;
@@ -62,7 +62,7 @@ namespace R.Server.Common
 			public SvcDescriptor(string[] allowRoles, IEnumerable<MthDescriptor> mthDescs)
 			{
 				_allowRoles = allowRoles;
-				_mthDescs = mthDescs.Convert2Dictionary(desc => desc.Name);
+				_mthDescs = mthDescs.ToDictionary(desc => desc.Name);
 			}
 
 			public bool IsPermitted(IPrincipal principal, string methodName)

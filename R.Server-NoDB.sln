@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R.Common", "R.Common\R.Comm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R.Server.PwdTool", "R.Server\R.Server.PwdTool\R.Server.PwdTool.csproj", "{F8738C0E-7AFA-4575-B800-53B50943F14F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R.SAT-UnitTests", "R.Sat\R.SAT-UnitTests\R.SAT-UnitTests.csproj", "{3A3D1193-17F3-43ED-909E-12B9CF4D7784}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
@@ -201,6 +203,21 @@ Global
 		{F8738C0E-7AFA-4575-B800-53B50943F14F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F8738C0E-7AFA-4575-B800-53B50943F14F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F8738C0E-7AFA-4575-B800-53B50943F14F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Default|.NET.ActiveCfg = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Default|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Default|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Release|.NET.ActiveCfg = Release|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,6 +233,7 @@ Global
 		{4F292719-A4B8-40EA-B90E-4EDB7D78E38B} = {87192DCE-C317-402E-BE48-F26F532D9DEC}
 		{7D9CAEC6-4973-4592-A321-54C9EFACA0F8} = {87192DCE-C317-402E-BE48-F26F532D9DEC}
 		{BD860F7E-AB2E-4125-8B14-BCE4C6214FDA} = {5CD22108-32BE-4C74-84C0-DA69C4817DB2}
+		{3A3D1193-17F3-43ED-909E-12B9CF4D7784} = {5CD22108-32BE-4C74-84C0-DA69C4817DB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = 

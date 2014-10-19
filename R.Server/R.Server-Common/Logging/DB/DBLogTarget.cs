@@ -1,4 +1,5 @@
-﻿#pragma warning disable 1692
+﻿using System.Linq;
+#pragma warning disable 1692
 using System;
 
 using R.Server.ServerModel;
@@ -19,7 +20,7 @@ namespace R.Server.Common
 		public DBLogTarget(IServiceProvider provider, TargetParameter[] targetParams)
 #pragma warning restore SuggestBaseTypeForParameter
 		{
-			var paramsMap = targetParams.Convert2Dictionary(p => p.Name);
+			var paramsMap = targetParams.ToDictionary(p => p.Name);
 			if (!paramsMap.ContainsKey(DBParamName))
 				throw new ApplicationException("Required parameter '" + DBParamName
 					+ "' not supplied for database log target.");

@@ -7,7 +7,7 @@ namespace R.Server.ServerModel
 	public class DBDriverInfo : NamedElementInfo
 	{
 		public DBDriverInfo(string name, Type type)
-			: base(name, "", type)
+			: base(name, type)
 		{
 		}
 	}
