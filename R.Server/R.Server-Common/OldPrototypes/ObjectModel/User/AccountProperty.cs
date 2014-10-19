@@ -1,4 +1,4 @@
-using BLToolkit.DataAccess;
+﻿using BLToolkit.DataAccess;
 using BLToolkit.Validation;
 
 namespace R.Server.Common.ObjectModel

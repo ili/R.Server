@@ -1,16 +1,16 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Помогает обеспечить декларативную публикацию сервисов.
+	/// РџРѕРјРѕРіР°РµС‚ РѕР±РµСЃРїРµС‡РёС‚СЊ РґРµРєР»Р°СЂР°С‚РёРІРЅСѓСЋ РїСѓР±Р»РёРєР°С†РёСЋ СЃРµСЂРІРёСЃРѕРІ.
 	/// </summary>
 	internal class ServicePublishingStrategy : AttachmentStrategyBase<ServiceAttribute>
 	{
 		private readonly IServicePublisher _publisher;
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public ServicePublishingStrategy(IServicePublisher publisher)
 		{
@@ -18,7 +18,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Подключает расширение.
+		/// РџРѕРґРєР»СЋС‡Р°РµС‚ СЂР°СЃС€РёСЂРµРЅРёРµ.
 		/// </summary>
 		protected override void Attach(ExtensionAttachmentContext context, ServiceAttribute attribute)
 		{

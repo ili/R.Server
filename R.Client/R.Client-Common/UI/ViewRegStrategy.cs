@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 using R.Client.Model;
 
@@ -13,7 +13,7 @@ namespace R.Client.Common
 		}
 
 		/// <summary>
-		/// Создать элемент.
+		/// РЎРѕР·РґР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public override ViewInfo CreateElement(
 			IExtensionAttachmentContext<Type, Attribute> context,

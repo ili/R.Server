@@ -1,22 +1,22 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Стратегия подключения секций конфигурации.
+	/// РЎС‚СЂР°С‚РµРіРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ СЃРµРєС†РёР№ РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 	/// </summary>
 	public class ConfigSectionStrategy
 		: RegKeyedElementsStrategy<Type, ConfigSectionInfo, ConfigSectionAttribute>
 	{
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public ConfigSectionStrategy(IServicePublisher publisher)
 			: base(publisher)
 		{}
 
 		/// <summary>
-		/// Создать элемент.
+		/// РЎРѕР·РґР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public override ConfigSectionInfo CreateElement(ExtensionAttachmentContext context, ConfigSectionAttribute attr)
 		{

@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.CommandLine
+п»їnamespace Rsdn.SmartApp.CommandLine
 {
 	/// <summary>
 	/// Strategy for registering command line rules provider.
@@ -7,7 +7,7 @@ namespace Rsdn.SmartApp.CommandLine
 		: RegElementsStrategy<CommandLineRulesProviderInfo, CommandLineRulesProviderAttribute>
 	{
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public RegCmdLineRulesProvidersStrategy(IServicePublisher publisher) : base(publisher)
 		{}

@@ -1,4 +1,4 @@
-namespace R.Server.PwdTool
+﻿namespace R.Server.PwdTool
 {
 	partial class MainForm
 	{

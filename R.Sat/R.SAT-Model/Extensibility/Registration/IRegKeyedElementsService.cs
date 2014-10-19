@@ -1,18 +1,18 @@
-namespace Rsdn.SmartApp
+п»їnamespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Сервис регистрации именованных элементов.
+	/// РЎРµСЂРІРёСЃ СЂРµРіРёСЃС‚СЂР°С†РёРё РёРјРµРЅРѕРІР°РЅРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ.
 	/// </summary>
 	public interface IRegKeyedElementsService<TKey, TInfo> : IRegElementsService<TInfo>
 		where TInfo : IKeyedElementInfo<TKey>
 	{
 		/// <summary>
-		/// Проверяет, есть ли зарегистрированный элемент с указанным именем.
+		/// РџСЂРѕРІРµСЂСЏРµС‚, РµСЃС‚СЊ Р»Рё Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹Р№ СЌР»РµРјРµРЅС‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРјРµРЅРµРј.
 		/// </summary>
 		bool ContainsElement(TKey key);
 
 		/// <summary>
-		/// Возвращает элемент по его ключу.
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЌР»РµРјРµРЅС‚ РїРѕ РµРіРѕ РєР»СЋС‡Сѓ.
 		/// </summary>
 		TInfo GetElement(TKey key);
 	}

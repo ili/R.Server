@@ -1,4 +1,4 @@
-using System.ServiceModel.Channels;
+﻿using System.ServiceModel.Channels;
 
 namespace R.Server.ClientModel
 {

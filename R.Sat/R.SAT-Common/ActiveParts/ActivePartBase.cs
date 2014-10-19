@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 
 using JetBrains.Annotations;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Базовая реализация <see cref="IActivePart"/>.
+	/// Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ <see cref="IActivePart"/>.
 	/// </summary>
 	public abstract class ActivePartBase : ServiceConsumer, IActivePart
 	{
@@ -13,7 +13,7 @@ namespace Rsdn.SmartApp
 		private bool _isActivated;
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		protected ActivePartBase([NotNull] IServiceProvider serviceProvider)
 			: base(serviceProvider) { }

@@ -1,16 +1,16 @@
-using System;
+п»їusing System;
 
 using JetBrains.Annotations;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Интерфейс сервиса, позволяющего публиковать сервисы.
+	/// РРЅС‚РµСЂС„РµР№СЃ СЃРµСЂРІРёСЃР°, РїРѕР·РІРѕР»СЏСЋС‰РµРіРѕ РїСѓР±Р»РёРєРѕРІР°С‚СЊ СЃРµСЂРІРёСЃС‹.
 	/// </summary>
 	public interface IServicePublisher : IServiceProvider
 	{
 		/// <summary>
-		/// Публикует экземпляр сервиса типа Т.
+		/// РџСѓР±Р»РёРєСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ СЃРµСЂРІРёСЃР° С‚РёРїР° Рў.
 		/// </summary>
 		[NotNull]
 		IServiceRegistrationCookie Publish(
@@ -18,7 +18,7 @@ namespace Rsdn.SmartApp
 			[NotNull] object serviceInstance);
 
 		/// <summary>
-		/// Публикует сервис типа Т с отложенной инициализацией.
+		/// РџСѓР±Р»РёРєСѓРµС‚ СЃРµСЂРІРёСЃ С‚РёРїР° Рў СЃ РѕС‚Р»РѕР¶РµРЅРЅРѕР№ РёРЅРёС†РёР°Р»РёР·Р°С†РёРµР№.
 		/// </summary>
 		[NotNull]
 		IServiceRegistrationCookie Publish(
@@ -26,7 +26,7 @@ namespace Rsdn.SmartApp
 			[NotNull] ServiceCreator serviceCreator);
 
 		/// <summary>
-		/// Убирает публикацию сервиса.
+		/// РЈР±РёСЂР°РµС‚ РїСѓР±Р»РёРєР°С†РёСЋ СЃРµСЂРІРёСЃР°.
 		/// </summary>
 		void Unpublish([NotNull] IServiceRegistrationCookie cookie);
 	}

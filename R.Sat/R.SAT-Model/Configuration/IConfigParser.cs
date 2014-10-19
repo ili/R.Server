@@ -1,7 +1,7 @@
-namespace Rsdn.SmartApp.Configuration
+п»їnamespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Парсер конфига.
+	/// РџР°СЂСЃРµСЂ РєРѕРЅС„РёРіР°.
 	/// </summary>
 	public interface IConfigParser
 	{

@@ -1,16 +1,16 @@
-using System;
+п»їusing System;
 
 using JetBrains.Annotations;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Интерфейс класса, предоставляющего специфические стратегии.
+	/// РРЅС‚РµСЂС„РµР№СЃ РєР»Р°СЃСЃР°, РїСЂРµРґРѕСЃС‚Р°РІР»СЏСЋС‰РµРіРѕ СЃРїРµС†РёС„РёС‡РµСЃРєРёРµ СЃС‚СЂР°С‚РµРіРёРё.
 	/// </summary>
 	public interface IExtensionStrategyFactory
 	{
 		/// <summary>
-		/// Создает стратегии.
+		/// РЎРѕР·РґР°РµС‚ СЃС‚СЂР°С‚РµРіРёРё.
 		/// </summary>
 		[NotNull]
 		IExtensionAttachmentStrategy[] CreateStrategies([NotNull] IServiceProvider provider);

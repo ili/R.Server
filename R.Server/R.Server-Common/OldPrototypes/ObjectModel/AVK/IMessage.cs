@@ -1,24 +1,24 @@
-using R.Server.Common.ObjectModel;
+п»їusing R.Server.Common.ObjectModel;
 
 namespace R.Server.Common.ObjectModel
 {
 	/// <summary>
-	/// Сообщение
+	/// РЎРѕРѕР±С‰РµРЅРёРµ
 	/// </summary>
 	public interface IMessage : IContentObject
 	{
 		/// <summary>
-		/// Ссылка на топик
+		/// РЎСЃС‹Р»РєР° РЅР° С‚РѕРїРёРє
 		/// </summary>
 		ITopic Topic { get; set; }
 
 		/// <summary>
-		/// Тема
+		/// РўРµРјР°
 		/// </summary>
 		string Subject { get; set; }
 
 		/// <summary>
-		/// Текст
+		/// РўРµРєСЃС‚
 		/// </summary>
 		string Text { get; set; }
 

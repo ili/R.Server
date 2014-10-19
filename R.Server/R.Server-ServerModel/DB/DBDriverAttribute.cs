@@ -1,4 +1,4 @@
-using Rsdn.SmartApp;
+﻿using Rsdn.SmartApp;
 
 namespace R.Server.ServerModel
 {

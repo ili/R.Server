@@ -1,4 +1,4 @@
-using System.Configuration.Provider;
+﻿using System.Configuration.Provider;
 
 using BLToolkit.Data;
 using BLToolkit.DataAccess;

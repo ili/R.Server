@@ -1,9 +1,9 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Вспомогательный класс для реализации атрибутов регистрации.
+	/// Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё Р°С‚СЂРёР±СѓС‚РѕРІ СЂРµРіРёСЃС‚СЂР°С†РёРё.
 	/// </summary>
 	public abstract class RegElementsStrategy<TInfo, TAttribute> : AttachmentStrategyBase<TAttribute>
 		where TAttribute : Attribute where TInfo : class
@@ -11,7 +11,7 @@ namespace Rsdn.SmartApp
 		private readonly IServicePublisher _publisher;
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		protected RegElementsStrategy(IServicePublisher publisher)
 		{
@@ -21,7 +21,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Публикатор сервисов.
+		/// РџСѓР±Р»РёРєР°С‚РѕСЂ СЃРµСЂРІРёСЃРѕРІ.
 		/// </summary>
 		protected IServicePublisher Publisher
 		{
@@ -29,7 +29,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Подключает расширение.
+		/// РџРѕРґРєР»СЋС‡Р°РµС‚ СЂР°СЃС€РёСЂРµРЅРёРµ.
 		/// </summary>
 		protected override void Attach(ExtensionAttachmentContext context, TAttribute attribute)
 		{
@@ -38,12 +38,12 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Создать элемент.
+		/// РЎРѕР·РґР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public abstract TInfo CreateElement(ExtensionAttachmentContext context, TAttribute attr);
 
 		/// <summary>
-		/// Создать реализацию сервиса.
+		/// РЎРѕР·РґР°С‚СЊ СЂРµР°Р»РёР·Р°С†РёСЋ СЃРµСЂРІРёСЃР°.
 		/// </summary>
 		protected virtual IRegElementsService<TInfo> CreateService(ExtensionAttachmentContext context, TAttribute attr)
 		{

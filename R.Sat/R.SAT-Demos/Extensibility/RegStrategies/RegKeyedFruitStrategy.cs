@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.Demos
+п»їnamespace Rsdn.SmartApp.Demos
 {
 	internal class RegKeyedFruitStrategy : RegKeyedElementsStrategy<string, FruitInfo, FruitAttribute>
 	{
@@ -6,7 +6,7 @@ namespace Rsdn.SmartApp.Demos
 		{}
 
 		/// <summary>
-		/// Создать элемент.
+		/// РЎРѕР·РґР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public override FruitInfo CreateElement(ExtensionAttachmentContext context, FruitAttribute attr)
 		{

@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 
 using JetBrains.Annotations;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Атрибут, помечающий реализацию <see cref="IExtensionStrategyFactory"/>
+	/// РђС‚СЂРёР±СѓС‚, РїРѕРјРµС‡Р°СЋС‰РёР№ СЂРµР°Р»РёР·Р°С†РёСЋ <see cref="IExtensionStrategyFactory"/>
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Class)]
 	[MeansImplicitUse]

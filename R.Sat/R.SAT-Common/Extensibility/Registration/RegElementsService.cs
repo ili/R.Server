@@ -1,10 +1,10 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Базовая реализация <see cref="IRegElementsService{EI}"/>
+	/// Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ <see cref="IRegElementsService{EI}"/>
 	/// </summary>
 	public class RegElementsService<TInfo> : IRegElementsService<TInfo> where TInfo : class
 	{
@@ -12,7 +12,7 @@ namespace Rsdn.SmartApp
 
 		#region IRegElementsService<EI> Members
 		/// <summary>
-		/// Зарегистрировать элемент.
+		/// Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public virtual void Register(TInfo elementInfo)
 		{
@@ -22,7 +22,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Получить список зарегистрированных элементов.
+		/// РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ.
 		/// </summary>
 		public virtual TInfo[] GetRegisteredElements()
 		{

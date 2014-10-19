@@ -1,6 +1,6 @@
-/*
+ο»Ώ/*
  * Created by: Eugene Agafonov  
- * Created: 2 ΰοπελÿ 2007 γ.
+ * Created: 2 Π°ΠΏΡ€ΠµΠ»Ρ 2007 Π³.
  */
 
 using System.Xml.Serialization;

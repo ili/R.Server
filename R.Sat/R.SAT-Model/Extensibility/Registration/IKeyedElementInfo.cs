@@ -1,12 +1,12 @@
-namespace Rsdn.SmartApp
+п»їnamespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Интерфейс именованного элемента.
+	/// РРЅС‚РµСЂС„РµР№СЃ РёРјРµРЅРѕРІР°РЅРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°.
 	/// </summary>
 	public interface IKeyedElementInfo<TKey>
 	{
 		/// <summary>
-		/// Ключ.
+		/// РљР»СЋС‡.
 		/// </summary>
 		TKey Key { get; }
 	}

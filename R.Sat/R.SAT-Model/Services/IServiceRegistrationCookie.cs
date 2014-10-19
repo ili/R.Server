@@ -1,7 +1,7 @@
-namespace Rsdn.SmartApp
+п»їnamespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Cookie, описывающий опубликованный сервис.
+	/// Cookie, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РѕРїСѓР±Р»РёРєРѕРІР°РЅРЅС‹Р№ СЃРµСЂРІРёСЃ.
 	/// </summary>
 	public interface IServiceRegistrationCookie
 	{

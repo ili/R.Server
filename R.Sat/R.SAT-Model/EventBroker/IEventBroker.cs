@@ -1,19 +1,19 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Брокер событий.
+	/// Р‘СЂРѕРєРµСЂ СЃРѕР±С‹С‚РёР№.
 	/// </summary>
 	public interface IEventBroker
 	{
 		/// <summary>
-		/// Оповестить подписчиков о событии.
+		/// РћРїРѕРІРµСЃС‚РёС‚СЊ РїРѕРґРїРёСЃС‡РёРєРѕРІ Рѕ СЃРѕР±С‹С‚РёРё.
 		/// </summary>
 		void Fire<T>(string eventName, T arg);
 
 		/// <summary>
-		/// Подписаться на событие.
+		/// РџРѕРґРїРёСЃР°С‚СЊСЃСЏ РЅР° СЃРѕР±С‹С‚РёРµ.
 		/// </summary>
 		IDisposable Subscribe<T>(string eventName, IObserver<T> observer);
 	}

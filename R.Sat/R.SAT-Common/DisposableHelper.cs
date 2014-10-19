@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Disposables;
@@ -13,7 +13,7 @@ namespace Rsdn.SmartApp
 	public static class DisposableHelper
 	{
 		/// <summary>
-		/// Вызывает Dispose всех элементов коллекции.
+		/// Р’С‹Р·С‹РІР°РµС‚ Dispose РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ РєРѕР»Р»РµРєС†РёРё.
 		/// </summary>
 		public static void DisposeAll([NotNull] this IEnumerable<IDisposable> disposables)
 		{

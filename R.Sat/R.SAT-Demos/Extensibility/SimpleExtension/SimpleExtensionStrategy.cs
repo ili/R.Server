@@ -1,4 +1,4 @@
-using System.IO;
+п»їusing System.IO;
 
 namespace Rsdn.SmartApp.Demos
 {
@@ -13,7 +13,7 @@ namespace Rsdn.SmartApp.Demos
 		}
 
 		/// <summary>
-		/// Подключает расширение.
+		/// РџРѕРґРєР»СЋС‡Р°РµС‚ СЂР°СЃС€РёСЂРµРЅРёРµ.
 		/// </summary>
 		protected override void Attach(ExtensionAttachmentContext context, SimpleExtensionAttribute attribute)
 		{

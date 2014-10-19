@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.Demos
+﻿namespace Rsdn.SmartApp.Demos
 {
 	[Fruit("orange")]
 	public class Orange

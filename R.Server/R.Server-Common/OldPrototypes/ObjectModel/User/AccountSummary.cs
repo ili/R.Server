@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 using BLToolkit.Common;
 using BLToolkit.DataAccess;

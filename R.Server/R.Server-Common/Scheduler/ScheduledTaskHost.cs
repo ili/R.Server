@@ -1,6 +1,6 @@
-/*
+п»ї/*
  * Created by: Eugene Agafonov
- * Created: 2 мая 2007 г.
+ * Created: 2 РјР°СЏ 2007 Рі.
  */
 
 using System;

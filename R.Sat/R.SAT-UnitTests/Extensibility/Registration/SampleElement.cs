@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.Extensibility.Registration
+﻿namespace Rsdn.SmartApp.Extensibility.Registration
 {
 	[Element]
 	[TestNamedElement(Name)]

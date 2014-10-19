@@ -1,6 +1,6 @@
-/*
+ο»Ώ/*
  * Created by: Eugene Agafonov
- * Created: 22 ΰοπελÿ 2007 γ.
+ * Created: 22 Π°ΠΏΡ€ΠµΠ»Ρ 2007 Π³.
  */
 
 using System;

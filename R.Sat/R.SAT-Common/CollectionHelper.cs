@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,24 +8,24 @@ using JetBrains.Annotations;
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Утилиты для работы с коллекциями.
+	/// РЈС‚РёР»РёС‚С‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РєРѕР»Р»РµРєС†РёСЏРјРё.
 	/// </summary>
 	public static class CollectionHelper
 	{
 		#region Delegates
 		/// <summary>
-		/// Делегат, описывающий метод преобразования коллекции к словарю.
+		/// Р”РµР»РµРіР°С‚, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РјРµС‚РѕРґ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєРѕР»Р»РµРєС†РёРё Рє СЃР»РѕРІР°СЂСЋ.
 		/// </summary>
 		public delegate TKey GetKey<TKey, TValue>(TValue source);
 
 		/// <summary>
-		/// Селектор.
+		/// РЎРµР»РµРєС‚РѕСЂ.
 		/// </summary>
 		public delegate T2 Selector<T1, T2>(T1 source);
 		#endregion
 
 		/// <summary>
-		/// Преобразует <see cref="ICollection"/> в массив указанного типа.
+		/// РџСЂРµРѕР±СЂР°Р·СѓРµС‚ <see cref="ICollection"/> РІ РјР°СЃСЃРёРІ СѓРєР°Р·Р°РЅРЅРѕРіРѕ С‚РёРїР°.
 		/// </summary>
 		public static T[] ToArray<T>(this ICollection collection)
 		{
@@ -40,7 +40,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Преобразует <see cref="ICollection{T}"/> в массив указанного типа.
+		/// РџСЂРµРѕР±СЂР°Р·СѓРµС‚ <see cref="ICollection{T}"/> РІ РјР°СЃСЃРёРІ СѓРєР°Р·Р°РЅРЅРѕРіРѕ С‚РёРїР°.
 		/// </summary>
 		public static T[] ToArray<T>(this ICollection<T> collection)
 		{
@@ -55,8 +55,8 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Преобразует <see cref="ICollection"/> в массив указанного типа и выполняет сортировку
-		/// переданной реализацией <see cref="IComparer{T}"/>.
+		/// РџСЂРµРѕР±СЂР°Р·СѓРµС‚ <see cref="ICollection"/> РІ РјР°СЃСЃРёРІ СѓРєР°Р·Р°РЅРЅРѕРіРѕ С‚РёРїР° Рё РІС‹РїРѕР»РЅСЏРµС‚ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+		/// РїРµСЂРµРґР°РЅРЅРѕР№ СЂРµР°Р»РёР·Р°С†РёРµР№ <see cref="IComparer{T}"/>.
 		/// </summary>
 		public static T[] ToArray<T>(ICollection collection, IComparer<T> comparer)
 		{
@@ -68,8 +68,8 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Преобразует <see cref="ICollection"/> в массив указанного типа и выполняет сортировку
-		/// переданным делегатом.
+		/// РџСЂРµРѕР±СЂР°Р·СѓРµС‚ <see cref="ICollection"/> РІ РјР°СЃСЃРёРІ СѓРєР°Р·Р°РЅРЅРѕРіРѕ С‚РёРїР° Рё РІС‹РїРѕР»РЅСЏРµС‚ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+		/// РїРµСЂРµРґР°РЅРЅС‹Рј РґРµР»РµРіР°С‚РѕРј.
 		/// </summary>
 		public static T[] ToArray<T>(ICollection collection, Comparison<T> comparison)
 		{
@@ -81,8 +81,8 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Преобразует <see cref="ICollection{T}"/> в массив указанного типа и выполняет сортировку
-		/// переданным делегатом.
+		/// РџСЂРµРѕР±СЂР°Р·СѓРµС‚ <see cref="ICollection{T}"/> РІ РјР°СЃСЃРёРІ СѓРєР°Р·Р°РЅРЅРѕРіРѕ С‚РёРїР° Рё РІС‹РїРѕР»РЅСЏРµС‚ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+		/// РїРµСЂРµРґР°РЅРЅС‹Рј РґРµР»РµРіР°С‚РѕРј.
 		/// </summary>
 		public static T[] ToArray<T>(ICollection<T> collection, Comparison<T> comparison)
 		{
@@ -94,7 +94,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Преобразует входную коллекцию в выходной массив при помощи переданного делегата.
+		/// РџСЂРµРѕР±СЂР°Р·СѓРµС‚ РІС…РѕРґРЅСѓСЋ РєРѕР»Р»РµРєС†РёСЋ РІ РІС‹С…РѕРґРЅРѕР№ РјР°СЃСЃРёРІ РїСЂРё РїРѕРјРѕС‰Рё РїРµСЂРµРґР°РЅРЅРѕРіРѕ РґРµР»РµРіР°С‚Р°.
 		/// </summary>
 		public static TOut[] ConvertAll<TIn, TOut>(this ICollection<TIn> collection,
 			Converter<TIn, TOut> converter)
@@ -110,7 +110,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Возвращает реверсивный вариант сравнения.
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЂРµРІРµСЂСЃРёРІРЅС‹Р№ РІР°СЂРёР°РЅС‚ СЃСЂР°РІРЅРµРЅРёСЏ.
 		/// </summary>
 		public static Comparison<T> ReverseComparision<T>(Comparison<T> srcComparision)
 		{
@@ -123,7 +123,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Выполняет переданное действие для всех элементов перечисления.
+		/// Р’С‹РїРѕР»РЅСЏРµС‚ РїРµСЂРµРґР°РЅРЅРѕРµ РґРµР№СЃС‚РІРёРµ РґР»СЏ РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ РїРµСЂРµС‡РёСЃР»РµРЅРёСЏ.
 		/// </summary>
 		public static void ForEach<T>(this IEnumerable<T> src, Action<T> action)
 		{

@@ -1,4 +1,4 @@
-namespace R.Client.Model
+﻿namespace R.Client.Model
 {
 	public interface IUIManagerService
 	{

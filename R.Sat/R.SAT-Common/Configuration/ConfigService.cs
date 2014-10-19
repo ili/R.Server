@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Стандартная реализация <see cref="IConfigService"/>
+	/// РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ <see cref="IConfigService"/>
 	/// </summary>
 	public class ConfigService : IConfigService, IDisposable
 	{
@@ -16,7 +16,7 @@ namespace Rsdn.SmartApp.Configuration
 		private readonly ConfigSerializer _serializer;
 
 		/// <summary>
-		/// Инициализирует экземпляр поставщиком данных конфигурации.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ РїРѕСЃС‚Р°РІС‰РёРєРѕРј РґР°РЅРЅС‹С… РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 		/// </summary>
 		public ConfigService(
 			IEnumerable<ConfigSectionInfo> sectionInfos,
@@ -34,7 +34,7 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Инициализирует экземпляр путем к файлу конфигурации.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ РїСѓС‚РµРј Рє С„Р°Р№Р»Сѓ РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 		/// </summary>
 		public ConfigService(
 			IEnumerable<ConfigSectionInfo> sectionInfos,
@@ -46,12 +46,12 @@ namespace Rsdn.SmartApp.Configuration
 
 		#region IConfigService Members
 		/// <summary>
-		/// Вызывается при изменении конфигурации.
+		/// Р’С‹Р·С‹РІР°РµС‚СЃСЏ РїСЂРё РёР·РјРµРЅРµРЅРёРё РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 		/// </summary>
 		public event EventHandler<IConfigService> ConfigChanged;
 
 		/// <summary>
-		/// Получить содержимое секции.
+		/// РџРѕР»СѓС‡РёС‚СЊ СЃРѕРґРµСЂР¶РёРјРѕРµ СЃРµРєС†РёРё.
 		/// </summary>
 		public T GetSection<T>()
 		{
@@ -74,7 +74,7 @@ namespace Rsdn.SmartApp.Configuration
 		#endregion
 
 		/// <summary>
-		/// Вызывает обработчики события <see cref="ConfigChanged"/>
+		/// Р’С‹Р·С‹РІР°РµС‚ РѕР±СЂР°Р±РѕС‚С‡РёРєРё СЃРѕР±С‹С‚РёСЏ <see cref="ConfigChanged"/>
 		/// </summary>
 		protected virtual void OnConfigChanged()
 		{

@@ -1,14 +1,14 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Базовая реализация описания именованного расширения.
+	/// Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РѕРїРёСЃР°РЅРёСЏ РёРјРµРЅРѕРІР°РЅРЅРѕРіРѕ СЂР°СЃС€РёСЂРµРЅРёСЏ.
 	/// </summary>
 	public abstract class NamedElementInfo : KeyedElementInfo<string>
 	{
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		protected NamedElementInfo(string name, Type type)
 			: base(type, name)
@@ -18,7 +18,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Имя расширения.
+		/// РРјСЏ СЂР°СЃС€РёСЂРµРЅРёСЏ.
 		/// </summary>
 		public string Name
 		{

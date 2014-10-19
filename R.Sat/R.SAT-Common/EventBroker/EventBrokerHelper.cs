@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Disposables;
@@ -9,7 +9,7 @@ using JetBrains.Annotations;
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Хелперный класс для работы с Event Broker.
+	/// РҐРµР»РїРµСЂРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Event Broker.
 	/// </summary>
 	public static class EventBrokerHelper
 	{
@@ -32,7 +32,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Подписывает на события специально размеченные методы.
+		/// РџРѕРґРїРёСЃС‹РІР°РµС‚ РЅР° СЃРѕР±С‹С‚РёСЏ СЃРїРµС†РёР°Р»СЊРЅРѕ СЂР°Р·РјРµС‡РµРЅРЅС‹Рµ РјРµС‚РѕРґС‹.
 		/// </summary>
 		public static IDisposable SubscribeEventHandlers(
 			[NotNull] object instance,
@@ -70,7 +70,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Регистрирует специально размеченные источники событий.
+		/// Р РµРіРёСЃС‚СЂРёСЂСѓРµС‚ СЃРїРµС†РёР°Р»СЊРЅРѕ СЂР°Р·РјРµС‡РµРЅРЅС‹Рµ РёСЃС‚РѕС‡РЅРёРєРё СЃРѕР±С‹С‚РёР№.
 		/// </summary>
 		public static IDisposable RegisterEventSources(
 			[NotNull] object instance,

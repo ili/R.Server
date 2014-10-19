@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 
 using JetBrains.Annotations;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Атрибут, помечающий источник события.
+	/// РђС‚СЂРёР±СѓС‚, РїРѕРјРµС‡Р°СЋС‰РёР№ РёСЃС‚РѕС‡РЅРёРє СЃРѕР±С‹С‚РёСЏ.
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Event | AttributeTargets.Property, AllowMultiple = true)]
 	[MeansImplicitUse]

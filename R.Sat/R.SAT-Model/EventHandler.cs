@@ -1,12 +1,12 @@
-namespace Rsdn.SmartApp
+п»їnamespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Обработчик события без аргументов.
+	/// РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ Р±РµР· Р°СЂРіСѓРјРµРЅС‚РѕРІ.
 	/// </summary>
 	public delegate void EventHandler<TSender>(TSender sender);
 
 	/// <summary>
-	/// Обработчик события с аргументами.
+	/// РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ СЃ Р°СЂРіСѓРјРµРЅС‚Р°РјРё.
 	/// </summary>
 	public delegate void EventHandler<TSender, TParams>(TSender sender, TParams eventParams);
 }

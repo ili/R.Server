@@ -1,4 +1,4 @@
-using Rsdn.SmartApp.Configuration;
+﻿using Rsdn.SmartApp.Configuration;
 
 namespace R.Client.Common
 {

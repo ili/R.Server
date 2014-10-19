@@ -1,4 +1,4 @@
-
+﻿
 namespace R.Server.Common.ObjectModel
 {
 	public interface ITemplateSetting

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Reflection;
@@ -7,24 +7,24 @@ using System.Linq;
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Базовая generic-реализация стратегии для <see cref="Type"/>.
+	/// Р‘Р°Р·РѕРІР°СЏ generic-СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё РґР»СЏ <see cref="Type"/>.
 	/// </summary>
 	public abstract class AttachmentStrategyBase<TAttribute> : AttachmentStrategyBase
 		where TAttribute : Attribute
 	{
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		protected AttachmentStrategyBase() : base(new [] {typeof (TAttribute)})
 		{}
 
 		/// <summary>
-		/// Подключает расширение.
+		/// РџРѕРґРєР»СЋС‡Р°РµС‚ СЂР°СЃС€РёСЂРµРЅРёРµ.
 		/// </summary>
 		protected abstract void Attach(ExtensionAttachmentContext context, TAttribute attribute);
 
 		/// <summary>
-		/// Подключает расширение.
+		/// РџРѕРґРєР»СЋС‡Р°РµС‚ СЂР°СЃС€РёСЂРµРЅРёРµ.
 		/// </summary>
 		protected override void Attach(ExtensionAttachmentContext context, CustomAttributeData attributeData)
 		{

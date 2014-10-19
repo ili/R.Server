@@ -1,10 +1,10 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Кеш элементов с ограничением максимального размера.
+	/// РљРµС€ СЌР»РµРјРµРЅС‚РѕРІ СЃ РѕРіСЂР°РЅРёС‡РµРЅРёРµРј РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СЂР°Р·РјРµСЂР°.
 	/// </summary>
 	public class LimitedElementsCache<TKey, TElement> : ElementsCache<TKey, TElement>
 	{
@@ -12,7 +12,7 @@ namespace Rsdn.SmartApp
 		private readonly Queue<TKey> _queue = new Queue<TKey>();
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public LimitedElementsCache(CreateElement<TKey, TElement> elementCreator, int maxSize)
 			: base(elementCreator)
@@ -21,7 +21,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Максимальный размер кеша.
+		/// РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ РєРµС€Р°.
 		/// </summary>
 		public int MaxSize
 		{
@@ -29,7 +29,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Вызывается после создания нового элемента.
+		/// Р’С‹Р·С‹РІР°РµС‚СЃСЏ РїРѕСЃР»Рµ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р°.
 		/// </summary>
 		protected override void OnAfterElementCreated(TKey key, TElement element)
 		{
@@ -40,7 +40,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Удаляет элемент кеша по заданному ключу.
+		/// РЈРґР°Р»СЏРµС‚ СЌР»РµРјРµРЅС‚ РєРµС€Р° РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РєР»СЋС‡Сѓ.
 		/// </summary>
 		public override void Drop(TKey key)
 		{
@@ -48,7 +48,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Сбросить кеш.
+		/// РЎР±СЂРѕСЃРёС‚СЊ РєРµС€.
 		/// </summary>
 		public override void Reset()
 		{

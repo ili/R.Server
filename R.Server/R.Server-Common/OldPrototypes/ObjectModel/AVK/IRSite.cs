@@ -1,9 +1,9 @@
-using R.Server.Common.ObjectModel;
+Ôªøusing R.Server.Common.ObjectModel;
 
 namespace R.Server.Common.ObjectModel
 {
 	/// <summary>
-	/// —‡ÈÚ
+	/// –°–∞–π—Ç
 	/// </summary>
 	public interface IRSite : IRObject
 	{

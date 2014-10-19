@@ -1,4 +1,4 @@
-using R.Client.Model;
+﻿using R.Client.Model;
 using R.Common;
 
 using Rsdn.SmartApp;
@@ -15,7 +15,7 @@ namespace R.Server.ManagerApp
 		public const string AppDescription = "R.Server management application";
 
 		private readonly AppEntryPoint _serversEntry = new AppEntryPoint(
-			"ServersEntry", "Add/Remove Servers �", true);
+			"ServersEntry", "Add/Remove Servers …", true);
 		private readonly ElementsCache<object, IUIController> _controllers;
 		private ServersFormModel _serversModel;
 

@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.CommandLine
+﻿namespace Rsdn.SmartApp.CommandLine
 {
 	internal class CmdLineSvcMock : CommandLineExtensibleService
 	{

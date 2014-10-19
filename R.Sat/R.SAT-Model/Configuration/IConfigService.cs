@@ -1,17 +1,17 @@
-namespace Rsdn.SmartApp.Configuration
+п»їnamespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Сервис конфигурации.
+	/// РЎРµСЂРІРёСЃ РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 	/// </summary>
 	public interface IConfigService
 	{
 		/// <summary>
-		/// Получить содержимое секции.
+		/// РџРѕР»СѓС‡РёС‚СЊ СЃРѕРґРµСЂР¶РёРјРѕРµ СЃРµРєС†РёРё.
 		/// </summary>
 		T GetSection<T>();
 
 		/// <summary>
-		/// Вызывается при изменении конфигурации.
+		/// Р’С‹Р·С‹РІР°РµС‚СЃСЏ РїСЂРё РёР·РјРµРЅРµРЅРёРё РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 		/// </summary>
 		event EventHandler<IConfigService> ConfigChanged;
 	}

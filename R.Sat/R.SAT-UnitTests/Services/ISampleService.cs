@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.Services
+﻿namespace Rsdn.SmartApp.Services
 {
 	public interface ISampleService
 	{

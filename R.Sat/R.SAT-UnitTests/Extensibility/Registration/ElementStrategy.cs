@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.Extensibility.Registration
+п»їnamespace Rsdn.SmartApp.Extensibility.Registration
 {
 	internal class ElementStrategy : RegElementsStrategy<ElementInfo, ElementAttribute>
 	{
@@ -8,7 +8,7 @@ namespace Rsdn.SmartApp.Extensibility.Registration
 		}
 
 		/// <summary>
-		/// Создать элемент.
+		/// РЎРѕР·РґР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public override ElementInfo CreateElement(ExtensionAttachmentContext context, ElementAttribute attr)
 		{

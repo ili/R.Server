@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -8,14 +8,14 @@ using JetBrains.Annotations;
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Базовая реализация менеджера расширений.
+	/// Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° СЂР°СЃС€РёСЂРµРЅРёР№.
 	/// </summary>
 	public class ExtensionManager : IExtensionManager, IServiceProvider
 	{
 		private readonly ServiceManager _serviceManager;
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public ExtensionManager([CanBeNull] IServiceProvider serviceProvider)
 		{
@@ -27,7 +27,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Внутренний ServiceManager.
+		/// Р’РЅСѓС‚СЂРµРЅРЅРёР№ ServiceManager.
 		/// </summary>
 		protected ServiceManager ServiceManager
 		{
@@ -36,7 +36,7 @@ namespace Rsdn.SmartApp
 
 		#region IExtensionManager Members
 		/// <summary>
-		/// Сканирует сборку.
+		/// РЎРєР°РЅРёСЂСѓРµС‚ СЃР±РѕСЂРєСѓ.
 		/// </summary>
 		public void Scan(IExtensionAttachmentStrategy strategy, [NotNull] params Assembly[] assemblies)
 		{

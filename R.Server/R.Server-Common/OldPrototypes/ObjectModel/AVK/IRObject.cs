@@ -1,9 +1,9 @@
-namespace R.Server.Common.ObjectModel
+п»їnamespace R.Server.Common.ObjectModel
 {
 	/// <summary>
-	/// Базовый интерфейс всех объектов сайта
+	/// Р‘Р°Р·РѕРІС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ СЃР°Р№С‚Р°
 	/// </summary>
-	/// <remarks>ID может быть типа Guid, это надо обсуждать</remarks>
+	/// <remarks>ID РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РёРїР° Guid, СЌС‚Рѕ РЅР°РґРѕ РѕР±СЃСѓР¶РґР°С‚СЊ</remarks>
 	public interface IRObject
 	{
 		int ID { get; }

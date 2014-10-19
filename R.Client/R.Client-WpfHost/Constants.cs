@@ -1,4 +1,4 @@
-namespace R.Client.WpfHost
+﻿namespace R.Client.WpfHost
 {
 	/// <summary>
 	/// Common WpfHost constants.

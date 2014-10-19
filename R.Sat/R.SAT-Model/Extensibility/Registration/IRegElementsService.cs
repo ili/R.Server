@@ -1,17 +1,17 @@
-namespace Rsdn.SmartApp
+п»їnamespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Сервис регистрации элементов.
+	/// РЎРµСЂРІРёСЃ СЂРµРіРёСЃС‚СЂР°С†РёРё СЌР»РµРјРµРЅС‚РѕРІ.
 	/// </summary>
 	public interface IRegElementsService<TInfo>
 	{
 		/// <summary>
-		/// Зарегистрировать элемент.
+		/// Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		void Register(TInfo elementInfo);
 
 		/// <summary>
-		/// Получить список зарегистрированных элементов.
+		/// РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ.
 		/// </summary>
 		TInfo[] GetRegisteredElements();
 	}

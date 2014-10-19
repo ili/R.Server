@@ -1,14 +1,14 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Атрибут, поменчающий секцию конфигурации.
+	/// РђС‚СЂРёР±СѓС‚, РїРѕРјРµРЅС‡Р°СЋС‰РёР№ СЃРµРєС†РёСЋ РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 	/// </summary>
 	public abstract class ConfigSectionAttribute : Attribute
 	{
 		/// <summary>
-		/// Инициализирует экземпляр. 
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ. 
 		/// </summary>
 		protected ConfigSectionAttribute(string name, string ns)
 		{
@@ -18,22 +18,22 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Имя секции.
+		/// РРјСЏ СЃРµРєС†РёРё.
 		/// </summary>
 		public string Name { get; private set; }
 
 		/// <summary>
-		/// Пространство имен.
+		/// РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ РёРјРµРЅ.
 		/// </summary>
 		public string Namespace { get; private set; }
 
 		/// <summary>
-		/// Признак допустимости слияния секций.
+		/// РџСЂРёР·РЅР°Рє РґРѕРїСѓСЃС‚РёРјРѕСЃС‚Рё СЃР»РёСЏРЅРёСЏ СЃРµРєС†РёР№.
 		/// </summary>
 		public bool AllowMerge { get; set; }
 
 		/// <summary>
-		/// Создать сериалайзер.
+		/// РЎРѕР·РґР°С‚СЊ СЃРµСЂРёР°Р»Р°Р№Р·РµСЂ.
 		/// </summary>
 		public abstract IConfigSectionSerializer CreateSerializer(Type contractType);
 	}

@@ -1,14 +1,14 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Описание секции конфигурации.
+	/// РћРїРёСЃР°РЅРёРµ СЃРµРєС†РёРё РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 	/// </summary>
 	public class ConfigSectionInfo : IKeyedElementInfo<Type>
 	{
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public ConfigSectionInfo(string name, string ns, bool allowMerge, Type contractType,
 			IConfigSectionSerializer serializer)
@@ -21,32 +21,32 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Имя секции.
+		/// РРјСЏ СЃРµРєС†РёРё.
 		/// </summary>
 		public string Name { get; private set; }
 
 		/// <summary>
-		/// XML_пространство имен.
+		/// XML_РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ РёРјРµРЅ.
 		/// </summary>
 		public string Namespace { get; private set; }
 
 		/// <summary>
-		/// Разрешено ли слияние секций в разных файлах.
+		/// Р Р°Р·СЂРµС€РµРЅРѕ Р»Рё СЃР»РёСЏРЅРёРµ СЃРµРєС†РёР№ РІ СЂР°Р·РЅС‹С… С„Р°Р№Р»Р°С….
 		/// </summary>
 		public bool AllowMerge { get; private set; }
 
 		/// <summary>
-		/// Тип контракта секции.
+		/// РўРёРї РєРѕРЅС‚СЂР°РєС‚Р° СЃРµРєС†РёРё.
 		/// </summary>
 		public Type ContractType { get; private set; }
 
 		/// <summary>
-		/// Сериализатор.
+		/// РЎРµСЂРёР°Р»РёР·Р°С‚РѕСЂ.
 		/// </summary>
 		public IConfigSectionSerializer Serializer { get; private set; }
 
 		/// <summary>
-		/// Имя.
+		/// РРјСЏ.
 		/// </summary>
 		Type IKeyedElementInfo<Type>.Key
 		{

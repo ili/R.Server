@@ -1,30 +1,30 @@
-using System;
+п»їusing System;
 using System.Runtime.Serialization;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Исключение, возбуждаемое в процессе подключения расширений.
+	/// РСЃРєР»СЋС‡РµРЅРёРµ, РІРѕР·Р±СѓР¶РґР°РµРјРѕРµ РІ РїСЂРѕС†РµСЃСЃРµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ СЂР°СЃС€РёСЂРµРЅРёР№.
 	/// </summary>
 	[Serializable]
 	public class ExtensibilityException : Exception
 	{
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public ExtensibilityException() : base("Extensibility error")
 		{
 		}
 
 		/// <summary>
-		/// Инициализирует экземпляр значением сообщения.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ Р·РЅР°С‡РµРЅРёРµРј СЃРѕРѕР±С‰РµРЅРёСЏ.
 		/// </summary>
 		public ExtensibilityException(string message) : base(message)
 		{
 		}
 
 		/// <summary>
-		/// Инициализирует экземпляр значением сообщения и вложенным исключением.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ Р·РЅР°С‡РµРЅРёРµРј СЃРѕРѕР±С‰РµРЅРёСЏ Рё РІР»РѕР¶РµРЅРЅС‹Рј РёСЃРєР»СЋС‡РµРЅРёРµРј.
 		/// </summary>
 		public ExtensibilityException(string message, Exception innerException)
 			: base(message, innerException)
@@ -32,8 +32,8 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Конструктор для сериализации.
-		/// Смотри <see cref="Exception(SerializationInfo, StreamingContext)"/>
+		/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ СЃРµСЂРёР°Р»РёР·Р°С†РёРё.
+		/// РЎРјРѕС‚СЂРё <see cref="Exception(SerializationInfo, StreamingContext)"/>
 		/// </summary>
 		protected ExtensibilityException(SerializationInfo info, StreamingContext context)
 			: base(info, context)

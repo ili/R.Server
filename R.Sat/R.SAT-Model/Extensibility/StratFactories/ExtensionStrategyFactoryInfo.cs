@@ -1,16 +1,16 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Информация о зарегистрированной фабрике стратегий.
+	/// РРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅРѕР№ С„Р°Р±СЂРёРєРµ СЃС‚СЂР°С‚РµРіРёР№.
 	/// </summary>
 	public class ExtensionStrategyFactoryInfo : IKeyedElementInfo<Type>
 	{
 		private readonly Type _type;
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public ExtensionStrategyFactoryInfo(Type type)
 		{
@@ -18,7 +18,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Тип фабрики.
+		/// РўРёРї С„Р°Р±СЂРёРєРё.
 		/// </summary>
 		public Type Type
 		{
@@ -27,7 +27,7 @@ namespace Rsdn.SmartApp
 
 		#region IKeyedElementInfo<Type> Members
 		/// <summary>
-		/// Ключ.
+		/// РљР»СЋС‡.
 		/// </summary>
 		Type IKeyedElementInfo<Type>.Key
 		{

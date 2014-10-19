@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp
 {
@@ -18,7 +18,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Выполняет подключение расширения.
+		/// Р’С‹РїРѕР»РЅСЏРµС‚ РїРѕРґРєР»СЋС‡РµРЅРёРµ СЂР°СЃС€РёСЂРµРЅРёСЏ.
 		/// </summary>
 		public void Attach(IExtensionAttachmentContext<ServicePublishingParam> context)
 		{

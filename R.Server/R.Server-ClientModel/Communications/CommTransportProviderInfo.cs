@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 
 using Rsdn.SmartApp;
 
@@ -27,7 +27,7 @@ namespace R.Server.ServerModel
 
 		#region IKeyedElementInfo<string> Members
 		/// <summary>
-		/// Êëþ÷.
+		/// ÐšÐ»ÑŽÑ‡.
 		/// </summary>
 		string IKeyedElementInfo<string>.Key
 		{

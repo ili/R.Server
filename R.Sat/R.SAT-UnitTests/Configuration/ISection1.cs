@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.Configuration
+﻿namespace Rsdn.SmartApp.Configuration
 {
 	[XmlSerializerSectionAttribute(typeof (Section1),
 		SchemaResource = "Rsdn.SmartApp.Configuration.Section1.xsd")]

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -120,7 +120,7 @@ namespace R.Client.Common
 
 		#region IServiceProvider Members
 		/// <summary>
-		/// Возвращает сервис, реализующий интерфейс T
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РёРЅС‚РµСЂС„РµР№СЃ T
 		/// </summary>
 		public object GetService(Type svcType)
 		{

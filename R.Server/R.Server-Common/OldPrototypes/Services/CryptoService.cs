@@ -1,4 +1,4 @@
-namespace R.Server.Common.Services
+﻿namespace R.Server.Common.Services
 {
 	public class CryptoService : ServiceBase<CryptoProvider>
 	{

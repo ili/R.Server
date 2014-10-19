@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 
 using JetBrains.Annotations;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Атрибут, помечающий обработчик события.
+	/// РђС‚СЂРёР±СѓС‚, РїРѕРјРµС‡Р°СЋС‰РёР№ РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ.
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 	[MeansImplicitUse]
@@ -14,7 +14,7 @@ namespace Rsdn.SmartApp
 		private readonly string _eventName;
 
 		/// <summary>
-		/// Инициализиурет экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСѓСЂРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public EventHandlerAttribute(string eventName)
 		{
@@ -22,7 +22,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Имя события.
+		/// РРјСЏ СЃРѕР±С‹С‚РёСЏ.
 		/// </summary>
 		public string EventName
 		{

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Linq;
 using System.Xml.Serialization;
 using System.Xml.Schema;
@@ -7,7 +7,7 @@ using System.Reflection;
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Помечает секцию конфигурации с использованием <see cref="XmlSerializer"/>
+	/// РџРѕРјРµС‡Р°РµС‚ СЃРµРєС†РёСЋ РєРѕРЅС„РёРіСѓСЂР°С†РёРё СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј <see cref="XmlSerializer"/>
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface)]
 	public class XmlSerializerSectionAttribute : ConfigSectionAttribute
@@ -35,7 +35,7 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Инициализирует экземпляр типом, реализующим контракт.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ С‚РёРїРѕРј, СЂРµР°Р»РёР·СѓСЋС‰РёРј РєРѕРЅС‚СЂР°РєС‚.
 		/// </summary>
 		public XmlSerializerSectionAttribute(Type implType)
 			: base(GetSectionName(implType), GetSectionNamespace(implType))
@@ -44,24 +44,24 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Инициализирует экземпляр именем типа, реализующего контракт.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ РёРјРµРЅРµРј С‚РёРїР°, СЂРµР°Р»РёР·СѓСЋС‰РµРіРѕ РєРѕРЅС‚СЂР°РєС‚.
 		/// </summary>
 		public XmlSerializerSectionAttribute(string implType)
 			: this(Type.GetType(implType, true))
 		{}
 
 		/// <summary>
-		/// Тип, реализующий конфигурацию. Должен быть сериализуемым в XML.
+		/// РўРёРї, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ. Р”РѕР»Р¶РµРЅ Р±С‹С‚СЊ СЃРµСЂРёР°Р»РёР·СѓРµРјС‹Рј РІ XML.
 		/// </summary>
 		public Type ImplementationType { get; private set; }
 
 		/// <summary>
-		/// Имя ресурса со схемой.
+		/// РРјСЏ СЂРµСЃСѓСЂСЃР° СЃРѕ СЃС…РµРјРѕР№.
 		/// </summary>
 		public string SchemaResource { get; set; }
 
 		/// <summary>
-		/// Возвращает схему конфигурации.
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃС…РµРјСѓ РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 		/// </summary>
 		protected virtual XmlSchema GetSchema(Type contractType)
 		{
@@ -83,7 +83,7 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Создать сериалайзер.
+		/// РЎРѕР·РґР°С‚СЊ СЃРµСЂРёР°Р»Р°Р№Р·РµСЂ.
 		/// </summary>
 		public override IConfigSectionSerializer CreateSerializer(Type contractType)
 		{

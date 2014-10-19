@@ -1,4 +1,4 @@
-#pragma warning disable 1692
+п»ї#pragma warning disable 1692
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -7,12 +7,12 @@ using JetBrains.Annotations;
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Делегат для создания элемента кеша.
+	/// Р”РµР»РµРіР°С‚ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЌР»РµРјРµРЅС‚Р° РєРµС€Р°.
 	/// </summary>
 	public delegate TElement CreateElement<TKey, TElement>(TKey key);
 
 	/// <summary>
-	/// Кеш элементов. Для создания необходим параметр.
+	/// РљРµС€ СЌР»РµРјРµРЅС‚РѕРІ. Р”Р»СЏ СЃРѕР·РґР°РЅРёСЏ РЅРµРѕР±С…РѕРґРёРј РїР°СЂР°РјРµС‚СЂ.
 	/// </summary>
 	public class ElementsCache<TKey, TElement>
 	{
@@ -21,7 +21,7 @@ namespace Rsdn.SmartApp
 		private readonly ReaderWriterLockSlim _cacheLock = new ReaderWriterLockSlim();
 
 		/// <summary>
-		/// Инициализирует экземпляр с указанием компаратора ключей.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ СЃ СѓРєР°Р·Р°РЅРёРµРј РєРѕРјРїР°СЂР°С‚РѕСЂР° РєР»СЋС‡РµР№.
 		/// </summary>
 		public ElementsCache(
 			[NotNull] CreateElement<TKey, TElement> elementCreator,
@@ -33,14 +33,14 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public ElementsCache([NotNull] CreateElement<TKey, TElement> elementCreator)
 			: this(elementCreator, null)
 		{}
 
 		/// <summary>
-		/// Создатель элементов.
+		/// РЎРѕР·РґР°С‚РµР»СЊ СЌР»РµРјРµРЅС‚РѕРІ.
 		/// </summary>
 		[NotNull]
 		public CreateElement<TKey, TElement> ElementCreator
@@ -49,7 +49,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Коллекция всех ключей.
+		/// РљРѕР»Р»РµРєС†РёСЏ РІСЃРµС… РєР»СЋС‡РµР№.
 		/// </summary>
 		[NotNull]
 		public ICollection<TKey> Keys
@@ -65,7 +65,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Извлекает элемент из кеша.
+		/// РР·РІР»РµРєР°РµС‚ СЌР»РµРјРµРЅС‚ РёР· РєРµС€Р°.
 		/// </summary>
 		public TElement Get([NotNull] TKey key)
 		{
@@ -89,14 +89,14 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Вызывается после создания нового элемента.
+		/// Р’С‹Р·С‹РІР°РµС‚СЃСЏ РїРѕСЃР»Рµ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р°.
 		/// </summary>
 		protected virtual void OnAfterElementCreated(TKey key, TElement element)
 		{
 		}
 
 		/// <summary>
-		/// Производит попытку извлечения элемента.
+		/// РџСЂРѕРёР·РІРѕРґРёС‚ РїРѕРїС‹С‚РєСѓ РёР·РІР»РµС‡РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р°.
 		/// </summary>
 		public bool TryGet([NotNull] TKey key, out TElement element)
 		{
@@ -109,7 +109,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Возвращает, содержит ли кеш элемент с указанным ключем.
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚, СЃРѕРґРµСЂР¶РёС‚ Р»Рё РєРµС€ СЌР»РµРјРµРЅС‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РєР»СЋС‡РµРј.
 		/// </summary>
 		public bool Contains([NotNull] TKey key)
 		{
@@ -122,7 +122,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Удаляет элемент кеша по заданному ключу.
+		/// РЈРґР°Р»СЏРµС‚ СЌР»РµРјРµРЅС‚ РєРµС€Р° РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РєР»СЋС‡Сѓ.
 		/// </summary>
 		public virtual void Drop([NotNull] TKey key)
 		{
@@ -135,7 +135,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Сбросить кеш.
+		/// РЎР±СЂРѕСЃРёС‚СЊ РєРµС€.
 		/// </summary>
 		public virtual void Reset()
 		{

@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 
 using JetBrains.Annotations;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Делегат, создающий сервис.
+	/// Р”РµР»РµРіР°С‚, СЃРѕР·РґР°СЋС‰РёР№ СЃРµСЂРІРёСЃ.
 	/// </summary>
 	[NotNull]
 	public delegate object ServiceCreator(

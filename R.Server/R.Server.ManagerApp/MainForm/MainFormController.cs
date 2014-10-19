@@ -1,4 +1,4 @@
-using R.Client.Common;
+﻿using R.Client.Common;
 using R.Client.Model;
 
 using Rsdn.SmartApp;

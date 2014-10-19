@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp
+﻿namespace Rsdn.SmartApp
 {
 	/// <summary>
 	/// Active part interface.

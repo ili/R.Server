@@ -1,17 +1,17 @@
-using System;
+п»їusing System;
 using JetBrains.Annotations;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Описание active part.
+	/// РћРїРёСЃР°РЅРёРµ active part.
 	/// </summary>
 	public class ActivePartInfo
 	{
 		private readonly string _typeName;
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public ActivePartInfo([NotNull] string typeName)
 		{
@@ -21,7 +21,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Тип, реализующий расширение.
+		/// РўРёРї, СЂРµР°Р»РёР·СѓСЋС‰РёР№ СЂР°СЃС€РёСЂРµРЅРёРµ.
 		/// </summary>
 		public string TypeName
 		{

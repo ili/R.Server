@@ -1,4 +1,4 @@
-namespace R.Server.ManagerApp
+﻿namespace R.Server.ManagerApp
 {
 	public class MainFormModel
 	{

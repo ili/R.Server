@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Сериализует секцию при помощи <see cref="XmlSerializer"/>
+	/// РЎРµСЂРёР°Р»РёР·СѓРµС‚ СЃРµРєС†РёСЋ РїСЂРё РїРѕРјРѕС‰Рё <see cref="XmlSerializer"/>
 	/// </summary>
 	public class XmlSectionSerializer : IConfigSectionSerializer
 	{
@@ -17,7 +17,7 @@ namespace Rsdn.SmartApp.Configuration
 		private readonly XmlSchema _schema;
 
 		/// <summary>
-		/// Инициализирует экземпляр типом контракта и схемой.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ С‚РёРїРѕРј РєРѕРЅС‚СЂР°РєС‚Р° Рё СЃС…РµРјРѕР№.
 		/// </summary>
 		public XmlSectionSerializer(Type contractType, XmlSchema schema)
 		{
@@ -26,14 +26,14 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Инициализирует экземпляр типом контракта.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ С‚РёРїРѕРј РєРѕРЅС‚СЂР°РєС‚Р°.
 		/// </summary>
 		public XmlSectionSerializer(Type contractType) : this(contractType, null)
 		{}
 
 		#region IConfigSectionSerializer Members
 		/// <summary>
-		/// Десериализовать секцию.
+		/// Р”РµСЃРµСЂРёР°Р»РёР·РѕРІР°С‚СЊ СЃРµРєС†РёСЋ.
 		/// </summary>
 		public object Deserialize(XmlReader reader)
 		{
@@ -49,7 +49,7 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Создать секцию по умолчанию.
+		/// РЎРѕР·РґР°С‚СЊ СЃРµРєС†РёСЋ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ.
 		/// </summary>
 		public object CreateDefaultSection()
 		{

@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Disposables;
@@ -7,7 +7,7 @@ using JetBrains.Annotations;
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Базовая реализация <see cref="IServicePublisher"/>
+	/// Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ <see cref="IServicePublisher"/>
 	/// </summary>
 	public class ServiceManager : IServicePublisher, IDisposable
 	{
@@ -21,18 +21,18 @@ namespace Rsdn.SmartApp
 		private readonly IServiceProvider[] _parentProviders;
 
 		/// <summary>
-		/// Инициализирует экземпляр без публикации <see cref="IServicePublisher"/>.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ Р±РµР· РїСѓР±Р»РёРєР°С†РёРё <see cref="IServicePublisher"/>.
 		/// </summary>
-		/// <param name="parentProviders">поставщик - родитель</param>
+		/// <param name="parentProviders">РїРѕСЃС‚Р°РІС‰РёРє - СЂРѕРґРёС‚РµР»СЊ</param>
 		public ServiceManager(params IServiceProvider[] parentProviders)
 			: this(false, parentProviders)
 		{}
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
-		/// <param name="parentProviders">поставщик - родитель</param>
-		/// <param name="publishPublisher">признак необходимости публикации
+		/// <param name="parentProviders">РїРѕСЃС‚Р°РІС‰РёРє - СЂРѕРґРёС‚РµР»СЊ</param>
+		/// <param name="publishPublisher">РїСЂРёР·РЅР°Рє РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё РїСѓР±Р»РёРєР°С†РёРё
 		/// <see cref="IServicePublisher"/></param>
 		public ServiceManager(bool publishPublisher, params IServiceProvider[] parentProviders)
 		{
@@ -50,7 +50,7 @@ namespace Rsdn.SmartApp
 
 		#region IServicePublisher Members
 		/// <summary>
-		/// Публикует экземпляр сервиса типа Т.
+		/// РџСѓР±Р»РёРєСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ СЃРµСЂРІРёСЃР° С‚РёРїР° Рў.
 		/// </summary>
 		public IServiceRegistrationCookie Publish(Type serviceType, object serviceInstance)
 		{
@@ -62,7 +62,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Публикует сервис типа Т с отложенной инициализацией.
+		/// РџСѓР±Р»РёРєСѓРµС‚ СЃРµСЂРІРёСЃ С‚РёРїР° Рў СЃ РѕС‚Р»РѕР¶РµРЅРЅРѕР№ РёРЅРёС†РёР°Р»РёР·Р°С†РёРµР№.
 		/// </summary>
 		public IServiceRegistrationCookie Publish(Type serviceType, ServiceCreator serviceCreator)
 		{
@@ -75,7 +75,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Убирает публикацию сервиса.
+		/// РЈР±РёСЂР°РµС‚ РїСѓР±Р»РёРєР°С†РёСЋ СЃРµСЂРІРёСЃР°.
 		/// </summary>
 		public void Unpublish(IServiceRegistrationCookie cookie)
 		{
@@ -93,7 +93,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Возвращает сервис, реализующий интерфейс T
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РёРЅС‚РµСЂС„РµР№СЃ T
 		/// </summary>
 		[CanBeNull]
 		public virtual object GetService([NotNull] Type serviceType)
@@ -124,7 +124,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Перечисляет уже созданные экземпляры сервисов.
+		/// РџРµСЂРµС‡РёСЃР»СЏРµС‚ СѓР¶Рµ СЃРѕР·РґР°РЅРЅС‹Рµ СЌРєР·РµРјРїР»СЏСЂС‹ СЃРµСЂРІРёСЃРѕРІ.
 		/// </summary>
 		public IEnumerable<object> GetCreatedInstances()
 		{

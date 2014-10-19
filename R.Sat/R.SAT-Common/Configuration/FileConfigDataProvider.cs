@@ -1,12 +1,12 @@
-using System;
+п»їusing System;
 using System.IO;
 using System.Xml;
 
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Параметры сервиса конфигурирования, обеспечивающие хранение конфигурации
-	/// в файле на диске.
+	/// РџР°СЂР°РјРµС‚СЂС‹ СЃРµСЂРІРёСЃР° РєРѕРЅС„РёРіСѓСЂРёСЂРѕРІР°РЅРёСЏ, РѕР±РµСЃРїРµС‡РёРІР°СЋС‰РёРµ С…СЂР°РЅРµРЅРёРµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё
+	/// РІ С„Р°Р№Р»Рµ РЅР° РґРёСЃРєРµ.
 	/// </summary>
 	public class FileConfigDataProvider : IConfigDataProvider, IDisposable
 	{
@@ -16,9 +16,9 @@ namespace Rsdn.SmartApp.Configuration
 		private EventHandler<IConfigDataProvider> _configChanged;
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
-		/// <param name="fileName">имя файла конфигурации</param>
+		/// <param name="fileName">РёРјСЏ С„Р°Р№Р»Р° РєРѕРЅС„РёРіСѓСЂР°С†РёРё</param>
 		public FileConfigDataProvider(string fileName)
 		{
 			if (string.IsNullOrEmpty(fileName))
@@ -38,7 +38,7 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Имя файла конфигурации.
+		/// РРјСЏ С„Р°Р№Р»Р° РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 		/// </summary>
 		public string FileName
 		{
@@ -47,9 +47,9 @@ namespace Rsdn.SmartApp.Configuration
 
 		#region IConfigDataProvider Members
 		/// <summary>
-		/// Читает данные конфигурации.
+		/// Р§РёС‚Р°РµС‚ РґР°РЅРЅС‹Рµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 		/// </summary>
-		/// <remarks>Ридер будет уничтожен вызывающим кодом</remarks>
+		/// <remarks>Р РёРґРµСЂ Р±СѓРґРµС‚ СѓРЅРёС‡С‚РѕР¶РµРЅ РІС‹Р·С‹РІР°СЋС‰РёРј РєРѕРґРѕРј</remarks>
 		public XmlReader ReadData()
 		{
 			return XmlReader.Create(
@@ -62,7 +62,7 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Происходит при изменении файла конфигурации внешними средствами.
+		/// РџСЂРѕРёСЃС…РѕРґРёС‚ РїСЂРё РёР·РјРµРЅРµРЅРёРё С„Р°Р№Р»Р° РєРѕРЅС„РёРіСѓСЂР°С†РёРё РІРЅРµС€РЅРёРјРё СЃСЂРµРґСЃС‚РІР°РјРё.
 		/// </summary>
 		public virtual event EventHandler<IConfigDataProvider> ConfigChanged
 		{
@@ -91,7 +91,7 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Разрешить включение.
+		/// Р Р°Р·СЂРµС€РёС‚СЊ РІРєР»СЋС‡РµРЅРёРµ.
 		/// </summary>
 		public FileConfigDataProvider ResolveInclude(string include)
 		{
@@ -102,7 +102,7 @@ namespace Rsdn.SmartApp.Configuration
 		}
 
 		/// <summary>
-		/// Вызывает события <see cref="ConfigChanged"/>
+		/// Р’С‹Р·С‹РІР°РµС‚ СЃРѕР±С‹С‚РёСЏ <see cref="ConfigChanged"/>
 		/// </summary>
 		protected virtual void OnConfigChanged()
 		{

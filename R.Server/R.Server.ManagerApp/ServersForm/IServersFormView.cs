@@ -1,4 +1,4 @@
-using R.Client.Model;
+﻿using R.Client.Model;
 
 namespace R.Server.ManagerApp
 {

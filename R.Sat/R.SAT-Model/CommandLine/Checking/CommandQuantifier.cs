@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.CommandLine
+﻿namespace Rsdn.SmartApp.CommandLine
 {
 	/// <summary>
 	/// Command quantifier.

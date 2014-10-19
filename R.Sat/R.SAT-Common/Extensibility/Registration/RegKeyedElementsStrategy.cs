@@ -1,9 +1,9 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Вспомогательный класс для реализации атрибутов регистрации.
+	/// Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё Р°С‚СЂРёР±СѓС‚РѕРІ СЂРµРіРёСЃС‚СЂР°С†РёРё.
 	/// </summary>
 	public abstract class RegKeyedElementsStrategy<TKey, TInfo, TAttribute>
 		: RegElementsStrategy<TInfo, TAttribute>
@@ -11,14 +11,14 @@ namespace Rsdn.SmartApp
 		where TInfo : class, IKeyedElementInfo<TKey> where TKey : class
 	{
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		protected RegKeyedElementsStrategy(IServicePublisher publisher)
 			: base(publisher)
 		{ }
 
 		/// <summary>
-		/// Подключает расширение.
+		/// РџРѕРґРєР»СЋС‡Р°РµС‚ СЂР°СЃС€РёСЂРµРЅРёРµ.
 		/// </summary>
 		protected override void Attach(ExtensionAttachmentContext context, TAttribute attribute)
 		{
@@ -27,7 +27,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Создать реализацию сервиса.
+		/// РЎРѕР·РґР°С‚СЊ СЂРµР°Р»РёР·Р°С†РёСЋ СЃРµСЂРІРёСЃР°.
 		/// </summary>
 		protected override IRegElementsService<TInfo> CreateService(ExtensionAttachmentContext context, TAttribute attr)
 		{

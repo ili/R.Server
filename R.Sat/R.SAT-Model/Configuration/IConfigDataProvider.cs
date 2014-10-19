@@ -1,25 +1,25 @@
-using System.Xml;
+п»їusing System.Xml;
 
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Поставщик данных с конфигурационной информацией.
+	/// РџРѕСЃС‚Р°РІС‰РёРє РґР°РЅРЅС‹С… СЃ РєРѕРЅС„РёРіСѓСЂР°С†РёРѕРЅРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРµР№.
 	/// </summary>
 	public interface IConfigDataProvider
 	{
 		/// <summary>
-		/// Читает данные конфигурации.
+		/// Р§РёС‚Р°РµС‚ РґР°РЅРЅС‹Рµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 		/// </summary>
-		/// <remarks>Ридер будет уничтожен вызывающим кодом</remarks>
+		/// <remarks>Р РёРґРµСЂ Р±СѓРґРµС‚ СѓРЅРёС‡С‚РѕР¶РµРЅ РІС‹Р·С‹РІР°СЋС‰РёРј РєРѕРґРѕРј</remarks>
 		XmlReader ReadData();
 
 		/// <summary>
-		/// Разрешает include.
+		/// Р Р°Р·СЂРµС€Р°РµС‚ include.
 		/// </summary>
 		IConfigDataProvider ResolveInclude(string path);
 
 		/// <summary>
-		/// Происходит при изменении файла конфигурации внешними средствами.
+		/// РџСЂРѕРёСЃС…РѕРґРёС‚ РїСЂРё РёР·РјРµРЅРµРЅРёРё С„Р°Р№Р»Р° РєРѕРЅС„РёРіСѓСЂР°С†РёРё РІРЅРµС€РЅРёРјРё СЃСЂРµРґСЃС‚РІР°РјРё.
 		/// </summary>
 		event EventHandler<IConfigDataProvider> ConfigChanged;
 	}

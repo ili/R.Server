@@ -1,4 +1,4 @@
-namespace R.Server.Common
+﻿namespace R.Server.Common
 {
 	/// <summary>
 	/// For serialization only.

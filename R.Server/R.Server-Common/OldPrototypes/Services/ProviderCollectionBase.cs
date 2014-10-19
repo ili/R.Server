@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Configuration.Provider;
 
 namespace R.Server.Common.Services

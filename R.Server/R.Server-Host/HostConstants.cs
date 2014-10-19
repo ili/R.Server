@@ -1,4 +1,4 @@
-namespace Rsdn.Server
+﻿namespace Rsdn.Server
 {
 	/// <summary>
 	/// Common constants for host application.

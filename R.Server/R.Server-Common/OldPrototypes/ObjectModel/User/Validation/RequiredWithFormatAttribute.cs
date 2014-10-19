@@ -1,4 +1,4 @@
-using BLToolkit.Validation;
+﻿using BLToolkit.Validation;
 
 namespace R.Server.Common.ObjectModel
 {

@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly : AssemblyConfiguration("")]
 [assembly : AssemblyCompany("Parus")]
 [assembly : AssemblyProduct("R.SAT-Common")]
-[assembly : AssemblyCopyright("Copyright � Parus 2006")]
+[assembly : AssemblyCopyright("Copyright © Parus 2006")]
 [assembly : AssemblyTrademark("")]
 [assembly : AssemblyCulture("")]
 

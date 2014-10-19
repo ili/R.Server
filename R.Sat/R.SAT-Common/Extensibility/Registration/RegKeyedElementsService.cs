@@ -1,10 +1,10 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Базовая реализация <see cref="IRegKeyedElementsService{K, EI}"/>
+	/// Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ <see cref="IRegKeyedElementsService{K, EI}"/>
 	/// </summary>
 	public class RegKeyedElementsService<TKey, TInfo> : RegElementsService<TInfo>,
 		IRegKeyedElementsService<TKey, TInfo>
@@ -16,7 +16,7 @@ namespace Rsdn.SmartApp
 
 		#region IRegKeyedElementsService<K,EI> Members
 		/// <summary>
-		/// Зарегистрировать элемент.
+		/// Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public override void Register(TInfo elementInfo)
 		{
@@ -31,7 +31,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Проверяет, есть ли зарегистрированный элемент с указанным именем.
+		/// РџСЂРѕРІРµСЂСЏРµС‚, РµСЃС‚СЊ Р»Рё Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹Р№ СЌР»РµРјРµРЅС‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РёРјРµРЅРµРј.
 		/// </summary>
 		public bool ContainsElement(TKey key)
 		{
@@ -41,7 +41,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Возвращает элемент по его имени.
+		/// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЌР»РµРјРµРЅС‚ РїРѕ РµРіРѕ РёРјРµРЅРё.
 		/// </summary>
 		public TInfo GetElement(TKey key)
 		{

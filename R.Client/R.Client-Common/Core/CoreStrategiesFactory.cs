@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using Rsdn.SmartApp;
 using Rsdn.SmartApp.Configuration;
 
@@ -9,7 +9,7 @@ namespace R.Client.Common
 	{
 		#region IExtensionStrategyFactory Members
 		/// <summary>
-		/// Создает стратегии.
+		/// РЎРѕР·РґР°РµС‚ СЃС‚СЂР°С‚РµРіРёРё.
 		/// </summary>
 		public IExtensionAttachmentStrategy[] CreateStrategies(IServiceProvider provider)
 		{

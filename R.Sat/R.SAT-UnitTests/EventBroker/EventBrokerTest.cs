@@ -1,4 +1,4 @@
-using System.Reactive;
+﻿using System.Reactive;
 using NUnit.Framework;
 
 namespace Rsdn.SmartApp.EventBrokerTests

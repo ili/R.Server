@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.Extensibility
+п»їnamespace Rsdn.SmartApp.Extensibility
 {
 	internal class SimpleExtensionStrategy : AttachmentStrategyBase<SimpleExtensionAttribute>
 	{
@@ -10,7 +10,7 @@ namespace Rsdn.SmartApp.Extensibility
 		}
 
 		/// <summary>
-		/// Подключает расширение.
+		/// РџРѕРґРєР»СЋС‡Р°РµС‚ СЂР°СЃС€РёСЂРµРЅРёРµ.
 		/// </summary>
 		protected override void Attach(ExtensionAttachmentContext context, SimpleExtensionAttribute attribute)
 		{

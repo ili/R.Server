@@ -1,4 +1,4 @@
-using R.Server.ServerModel;
+﻿using R.Server.ServerModel;
 
 namespace R.Server.Common
 {

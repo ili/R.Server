@@ -1,34 +1,34 @@
-namespace Rsdn.SmartApp.Configuration
+п»їnamespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Константы, связанные с XML-представлением конфигурации.
+	/// РљРѕРЅСЃС‚Р°РЅС‚С‹, СЃРІСЏР·Р°РЅРЅС‹Рµ СЃ XML-РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµРј РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 	/// </summary>
 	public static class ConfigXmlConstants
 	{
 		/// <summary>
-		/// XML-неймспейс.
+		/// XML-РЅРµР№РјСЃРїРµР№СЃ.
 		/// </summary>
 		public const string XmlNamespace =
 			"http://rsdn.ru/R.SAT/ConfigSectionSchema.xsd";
 
 		/// <summary>
-		/// Имя ресурса со схемой.
+		/// РРјСЏ СЂРµСЃСѓСЂСЃР° СЃРѕ СЃС…РµРјРѕР№.
 		/// </summary>
 		public const string XmlSchemaResource =
 			"Rsdn.SmartApp.Configuration.ConfigSectionSchema.xsd";
 
 		/// <summary>
-		/// Имя тега с инклюдом.
+		/// РРјСЏ С‚РµРіР° СЃ РёРЅРєР»СЋРґРѕРј.
 		/// </summary>
 		public const string IncludeTagName = "include";
 
 		/// <summary>
-		/// Имя тега с переменной.
+		/// РРјСЏ С‚РµРіР° СЃ РїРµСЂРµРјРµРЅРЅРѕР№.
 		/// </summary>
 		public const string VariableTagName = "var";
 
 		/// <summary>
-		/// Имя атрибута с именем переменной.
+		/// РРјСЏ Р°С‚СЂРёР±СѓС‚Р° СЃ РёРјРµРЅРµРј РїРµСЂРµРјРµРЅРЅРѕР№.
 		/// </summary>
 		public const string VariableNameAttribute = "name";
 	}

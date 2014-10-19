@@ -1,7 +1,7 @@
-#pragma warning disable 1692
+ο»Ώ#pragma warning disable 1692
 /*
  * Created by: Eugene Agafonov
- * Created: 1 ΰοπελÿ 2007 γ.
+ * Created: 1 Π°ΠΏΡ€ΠµΠ»Ρ 2007 Π³.
  */
 
 using System;

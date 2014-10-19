@@ -1,4 +1,4 @@
-namespace R.Server.ServerModel
+﻿namespace R.Server.ServerModel
 {
 	public interface IAuthorizationProvider
 	{

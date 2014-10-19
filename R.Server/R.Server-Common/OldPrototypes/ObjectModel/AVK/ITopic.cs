@@ -1,4 +1,4 @@
-using R.Server.Common.ObjectModel;
+﻿using R.Server.Common.ObjectModel;
 
 namespace R.Server.Common.ObjectModel
 {

@@ -1,19 +1,19 @@
-using System.Xml;
+п»їusing System.Xml;
 
 namespace Rsdn.SmartApp.Configuration
 {
 	/// <summary>
-	/// Сериализатор секции конфигурации.
+	/// РЎРµСЂРёР°Р»РёР·Р°С‚РѕСЂ СЃРµРєС†РёРё РєРѕРЅС„РёРіСѓСЂР°С†РёРё.
 	/// </summary>
 	public interface IConfigSectionSerializer
 	{
 		/// <summary>
-		/// Десериализовать секцию.
+		/// Р”РµСЃРµСЂРёР°Р»РёР·РѕРІР°С‚СЊ СЃРµРєС†РёСЋ.
 		/// </summary>
 		object Deserialize(XmlReader reader);
 
 		/// <summary>
-		/// Создать секцию по умолчанию.
+		/// РЎРѕР·РґР°С‚СЊ СЃРµРєС†РёСЋ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ.
 		/// </summary>
 		object CreateDefaultSection();
 	}

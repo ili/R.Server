@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,7 +10,7 @@ using JetBrains.Annotations;
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Стандартная реализация <see cref="IEventBroker"/>.
+	/// РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ <see cref="IEventBroker"/>.
 	/// </summary>
 	[Localizable(false)]
 	public class EventBroker : IEventBroker

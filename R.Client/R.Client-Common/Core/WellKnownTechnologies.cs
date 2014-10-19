@@ -1,4 +1,4 @@
-namespace R.Client.Common
+﻿namespace R.Client.Common
 {
 	/// <summary>
 	/// Well known technologies constants.

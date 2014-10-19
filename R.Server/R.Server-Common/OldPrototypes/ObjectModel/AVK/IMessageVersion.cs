@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 
 using R.Server.Common.ObjectModel;
 
 namespace R.Server.Common.ObjectModel
 {
 	/// <summary>
-	/// Версия сообщения. Формируется автоматически при модификации текста
+	/// Р’РµСЂСЃРёСЏ СЃРѕРѕР±С‰РµРЅРёСЏ. Р¤РѕСЂРјРёСЂСѓРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїСЂРё РјРѕРґРёС„РёРєР°С†РёРё С‚РµРєСЃС‚Р°
 	/// </summary>
 	public interface IMessageVersion : IContentObject
 	{

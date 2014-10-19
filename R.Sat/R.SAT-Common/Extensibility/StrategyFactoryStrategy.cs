@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 
 namespace Rsdn.SmartApp
 {
 	using FactoriesSvc = IRegKeyedElementsService<Type, ExtensionStrategyFactoryInfo>;
 
 	/// <summary>
-	/// Стратегия подключения фабрик стратегий.
+	/// РЎС‚СЂР°С‚РµРіРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ С„Р°Р±СЂРёРє СЃС‚СЂР°С‚РµРіРёР№.
 	/// </summary>
 	public class StrategyFactoryStrategy :
 		RegKeyedElementsStrategy<Type, ExtensionStrategyFactoryInfo,ExtensionStrategyFactoryAttribute>
@@ -15,13 +15,13 @@ namespace Rsdn.SmartApp
 				type => (IExtensionStrategyFactory) Activator.CreateInstance(type));
 
 		/// <summary>
-		/// Инициализирует экземпляр.
+		/// РРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ СЌРєР·РµРјРїР»СЏСЂ.
 		/// </summary>
 		public StrategyFactoryStrategy(IServicePublisher publisher) : base(publisher)
 		{}
 
 		/// <summary>
-		/// Создать элемент.
+		/// РЎРѕР·РґР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public override ExtensionStrategyFactoryInfo CreateElement(
 			ExtensionAttachmentContext context,
@@ -34,7 +34,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Сканировать типы с указанной фабрикой стратегий.
+		/// РЎРєР°РЅРёСЂРѕРІР°С‚СЊ С‚РёРїС‹ СЃ СѓРєР°Р·Р°РЅРЅРѕР№ С„Р°Р±СЂРёРєРѕР№ СЃС‚СЂР°С‚РµРіРёР№.
 		/// </summary>
 		public static void ScanWithFactory(Type factoryType,
 			IServiceProvider provider,
@@ -46,7 +46,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Сканировать со всеми фабриками.
+		/// РЎРєР°РЅРёСЂРѕРІР°С‚СЊ СЃРѕ РІСЃРµРјРё С„Р°Р±СЂРёРєР°РјРё.
 		/// </summary>
 		public static void ScanWithAllFactories(
 			IServiceProvider provider,
@@ -62,7 +62,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Зарегистрировать все фабрики и сканировать вместе с ними.
+		/// Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊ РІСЃРµ С„Р°Р±СЂРёРєРё Рё СЃРєР°РЅРёСЂРѕРІР°С‚СЊ РІРјРµСЃС‚Рµ СЃ РЅРёРјРё.
 		/// </summary>
 		public static void RegisterAndScan(
 			IServicePublisher publisher,

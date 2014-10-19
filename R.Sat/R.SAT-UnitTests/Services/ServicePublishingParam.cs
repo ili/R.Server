@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp
+﻿namespace Rsdn.SmartApp
 {
 	public class ServicePublishingParam {}
 }

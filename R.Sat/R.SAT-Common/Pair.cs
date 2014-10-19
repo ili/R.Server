@@ -1,4 +1,4 @@
-#pragma warning disable 1692
+﻿#pragma warning disable 1692
 namespace Rsdn.SmartApp
 {
 	/// <summary>

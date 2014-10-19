@@ -1,4 +1,4 @@
-namespace R.Common
+﻿namespace R.Common
 {
 	public static class CommonConstants
 	{

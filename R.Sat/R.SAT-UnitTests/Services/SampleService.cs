@@ -1,4 +1,4 @@
-namespace Rsdn.SmartApp.Services
+﻿namespace Rsdn.SmartApp.Services
 {
 	[Service(typeof (ISampleService))]
 	internal class SampleService : ISampleService

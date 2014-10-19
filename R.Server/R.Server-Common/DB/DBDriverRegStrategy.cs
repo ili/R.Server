@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 using R.Server.ServerModel;
 
@@ -14,7 +14,7 @@ namespace R.Server.Common
 		}
 
 		/// <summary>
-		/// Создать элемент.
+		/// РЎРѕР·РґР°С‚СЊ СЌР»РµРјРµРЅС‚.
 		/// </summary>
 		public override DBDriverInfo CreateElement(
 			ExtensionAttachmentContext context,

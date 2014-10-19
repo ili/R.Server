@@ -1,11 +1,11 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.Reflection;
 
 namespace Rsdn.SmartApp
 {
 	/// <summary>
-	/// Вспомогательный класс для работы со сборками.
+	/// Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃРѕ СЃР±РѕСЂРєР°РјРё.
 	/// </summary>
 	public class AssemblyScanHelper
 	{
@@ -15,7 +15,7 @@ namespace Rsdn.SmartApp
 		private Type[] _types;
 
 		/// <summary>
-		/// Добавить сборку.
+		/// Р”РѕР±Р°РІРёС‚СЊ СЃР±РѕСЂРєСѓ.
 		/// </summary>
 		public void AddAssembly(Assembly asm)
 		{
@@ -28,7 +28,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Добавить сборку по типу, который в ней содержится.
+		/// Р”РѕР±Р°РІРёС‚СЊ СЃР±РѕСЂРєСѓ РїРѕ С‚РёРїСѓ, РєРѕС‚РѕСЂС‹Р№ РІ РЅРµР№ СЃРѕРґРµСЂР¶РёС‚СЃСЏ.
 		/// </summary>
 		public void AddAssembly(Type type)
 		{
@@ -38,7 +38,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Добавить сборку по ее имени.
+		/// Р”РѕР±Р°РІРёС‚СЊ СЃР±РѕСЂРєСѓ РїРѕ РµРµ РёРјРµРЅРё.
 		/// </summary>
 		public void AddAssembly(string name)
 		{
@@ -51,7 +51,7 @@ namespace Rsdn.SmartApp
 		}
 
 		/// <summary>
-		/// Получить типы добавленных сборок.
+		/// РџРѕР»СѓС‡РёС‚СЊ С‚РёРїС‹ РґРѕР±Р°РІР»РµРЅРЅС‹С… СЃР±РѕСЂРѕРє.
 		/// </summary>
 		public Type[] GetTypes()
 		{
