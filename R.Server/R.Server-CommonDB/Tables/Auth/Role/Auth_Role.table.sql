@@ -1,0 +1,6 @@
+﻿CREATE TABLE Auth_Role
+(
+	RoleID UNIQUEIDENTIFIER NOT NULL,
+	PermissionOwnerType INT NOT NULL,
+	RoleName VARCHAR(64) NOT NULL
+);

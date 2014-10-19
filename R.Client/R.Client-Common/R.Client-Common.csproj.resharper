@@ -1,0 +1,6 @@
+<Configuration>
+  <NamespaceFolders>
+    <SkipFolder>2069EC2D-89C2-479B-A959-58C749A6C75A/d:Core</SkipFolder>
+    <SkipFolder>2069EC2D-89C2-479B-A959-58C749A6C75A/d:UI</SkipFolder>
+  </NamespaceFolders>
+</Configuration>

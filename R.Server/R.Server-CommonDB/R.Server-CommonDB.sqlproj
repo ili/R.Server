@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>"DatabaseProject"</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28f15d44-eb76-4d30-ab9b-2a90bc5a2f84}</ProjectGuid>
+    <ShowWizard>True</ShowWizard>
+    <OutputType>Database</OutputType>
+    <DBProduct>SQL Server 2005</DBProduct>
+    <RootPath>
+    </RootPath>
+    <ArithAbort>True</ArithAbort>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <AnsiNulls>True</AnsiNulls>
+    <ConcatNullYieldsNull>True</ConcatNullYieldsNull>
+    <AnsiPadding>True</AnsiPadding>
+    <AnsiWarnings>True</AnsiWarnings>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <DefaultSchemaForUnqualifiedObjects>dbo</DefaultSchemaForUnqualifiedObjects>
+    <EnableFullTextSearch>False</EnableFullTextSearch>
+    <EnableCLRIntegration>False</EnableCLRIntegration>
+    <AutoUpdateStatisticsAsynchronously>True</AutoUpdateStatisticsAsynchronously>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoClose>True</AutoClose>
+    <DefaultCursor>LOCAL</DefaultCursor>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DatabaseState>ONLINE</DatabaseState>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <UpdateOptions>READ_WRITE</UpdateOptions>
+    <Parameterization>SIMPLE</Parameterization>
+    <Recovery>FULL</Recovery>
+    <PageVerify>NONE</PageVerify>
+    <TornPageDetection>False</TornPageDetection>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <AnsiNullDefault>True</AnsiNullDefault>
+    <DefaultCollation>Cyrillic_General_CI_AS</DefaultCollation>
+    <DefaultFileStructure>BySchemaType</DefaultFileStructure>
+    <DatabaseChaining>False</DatabaseChaining>
+    <EnableServiceBroker>False</EnableServiceBroker>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <Trustworthy>False</Trustworthy>
+    <IncludeSchemaNameInFilename>False</IncludeSchemaNameInFilename>
+    <DoNotUseAlterAssemblyStatementsToUpdateCLRTypes>False</DoNotUseAlterAssemblyStatementsToUpdateCLRTypes>
+    <ProjectVersion>2</ProjectVersion>
+    <OutputPath>.\sql\</OutputPath>
+    <DefaultSchema>dbo</DefaultSchema>
+    <BuildVersion>9.0.20706.1</BuildVersion>
+    <RootNamespace>R.Server-CommonDB</RootNamespace>
+    <PreviousProjectVersion>2</PreviousProjectVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.\sql\</OutputPath>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <DeploymentCollationPreference>ChangeTargetDBCollation</DeploymentCollationPreference>
+    <AlwaysCreateNewDatabase>false</AlwaysCreateNewDatabase>
+    <GenerateDropsIfNotInProject>False</GenerateDropsIfNotInProject>
+    <BlockIncrementalDeploymentIfDataLoss>True</BlockIncrementalDeploymentIfDataLoss>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <PerformDatabaseBackup>False</PerformDatabaseBackup>
+    <SingleUserMode>False</SingleUserMode>
+    <UseFuzzyMatchForColumns>False</UseFuzzyMatchForColumns>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <AutoGenerateBuildScriptName>False</AutoGenerateBuildScriptName>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\TeamData\Microsoft.VisualStudio.TeamSystem.Data.Tasks.targets" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Tables" />
+    <Folder Include="Tables\Auth" />
+    <Folder Include="Tables\Auth\Group" />
+    <Folder Include="Tables\Auth\GroupRole" />
+    <Folder Include="Tables\Auth\NativeLogin" />
+    <Folder Include="Tables\Auth\PermissionOwner" />
+    <Folder Include="Tables\Auth\Principal" />
+    <Folder Include="Tables\Auth\PrincipalGroup" />
+    <Folder Include="Tables\Auth\PrincipalLogin" />
+    <Folder Include="Tables\Auth\Role" />
+    <Folder Include="Tables\Content" />
+    <Folder Include="Tables\Content\Content" />
+    <Folder Include="Tables\Content\ContentType" />
+    <Folder Include="Tables\Content\TextContent" />
+    <Folder Include="Tables\Log" />
+    <Folder Include="Tables\Log\Log" />
+    <Folder Include="Tables\Log\Source" />
+    <Folder Include="Tables\User" />
+    <Folder Include="Tables\User\PrivateBaseProfile" />
+    <Folder Include="Tables\User\PublicBaseProfile" />
+    <Folder Include="Tables\User\User" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql">
+      <SubType>Code</SubType>
+    </PreDeploy>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql">
+      <SubType>Code</SubType>
+    </PostDeploy>
+    <NotInBuild Include="Data Generation Plans\Auth.dgen">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\Auth.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\ContentTypes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Pre-Deployment\CustomErrors.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Pre-Deployment\EncryptionKeysAndCertificates.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Pre-Deployment\LinkedServers.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Pre-Deployment\Logins.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Tables\User\PublicBaseProfile\Test_Add.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Tables\User\PublicBaseProfile\Test_Drop.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Auth\Auth_GetLoginRoles.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\NativeLogin\Auth_GetPasswordHash.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PrincipalLogin\AuthenticationType_IdentityName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PrincipalLogin\Auth_PrincipalLogin.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PrincipalLogin\PK.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\TextContent\Content_AddTextContent.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\TextContent\Content_DropTextContent.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\TextContent\TextContentID_ContentType.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\GroupRole\Auth_Group.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\GroupRole\Auth_GroupRole.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\GroupRole\Auth_Role.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\GroupRole\GroupID_RoleID.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\NativeLogin\Auth_NativeLogin.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\NativeLogin\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\NativeLogin\UserName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PermissionOwner\PermissionOwnerID_PermissionOwnerType.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PermissionOwner\PermissionOwnerType.chkconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PermissionOwner\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PermissionOwner\Auth_PermissionOwner.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PrincipalGroup\Auth_Group.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PrincipalGroup\Auth_Principal.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PrincipalGroup\Auth_PrincipalGroup.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\PrincipalGroup\PrincipalID_GroupID.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Principal\Auth_AddPrincipal.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Principal\Auth_DropPrincipal.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Principal\Auth_Principal.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Principal\Auth_PermissionOwner.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Principal\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Group\Auth_Group.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Group\GroupName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Group\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Role\Auth_AddRole.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Role\Auth_DropRole.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Role\Auth_PermissionOwner.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Role\RoleName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Role\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Auth\Role\Auth_Role.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\ContentType\ContentTypeName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\ContentType\Content_ContentType.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\ContentType\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\ContentType\ShortID.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\Content\ContentID_ContentType.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\Content\Content_Content.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\Content\Content_ContentType.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\Content\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\TextContent\Content_Content.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\TextContent\Content_TextContent.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Content\TextContent\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Global_PK.uddt.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Log\EventDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Log\EventImpotance.chkconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Log\EventType.chkconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Log\Log_AddEvent.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Log\Log_Log.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Log\Log_Message.uddt.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Log\Log_Source.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Log_LogView.view.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Source\Log_GetSourceID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Source\Log_Source.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Source\Log_SourceName.uddt.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Source\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\Log\Source\SourceName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PrivateBaseProfile\Content_Content.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PrivateBaseProfile\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PrivateBaseProfile\User_PrivateBaseProfile.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PrivateBaseProfile\User_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PublicBaseProfile\Content_TextContent.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PublicBaseProfile\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PublicBaseProfile\User_AddPublicBaseProfile.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PublicBaseProfile\User_AddPublicBaseProfile_Base.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PublicBaseProfile\User_DropPublicBaseProfile.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\PublicBaseProfile\User_PublicBaseProfile.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\User\Auth_Principal.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\User\Nick.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\User\PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Tables\User\User\User_User.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+  </ItemGroup>
+  <PropertyGroup>
+    <FilegroupSetVariables>
+      <Variable Name="PrimaryFileName" Value="$(TargetDatabase)_mdf" />
+      <Variable Name="PrimaryLogFileName" Value="$(TargetDatabase)_ldf" />
+      <Variable Name="PrimaryFilePhysicalName" Value="$(DefaultDataPath)$(TargetDatabase).mdf" />
+      <Variable Name="PrimaryLogFilePhysicalName" Value="$(DefaultDataPath)$(TargetDatabase)_log.ldf" />
+    </FilegroupSetVariables>
+  </PropertyGroup>
+</Project>

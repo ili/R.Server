@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="LoggerConfig"
+		targetNamespace="http://rsdn.ru/R.Server/Schemas/LoggerConfig.xsd"
+		elementFormDefault="qualified"
+		xmlns="http://rsdn.ru/R.Server/Schemas/LoggerConfig.xsd"
+		xmlns:mstns="http://rsdn.ru/R.Server/Schemas/LoggerConfig.xsd"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="logger">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="target" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="param" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="name" type="xs:string" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="name" type="xs:string" use ="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

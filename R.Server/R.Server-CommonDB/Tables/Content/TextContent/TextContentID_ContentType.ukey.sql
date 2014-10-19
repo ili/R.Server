@@ -1,0 +1,3 @@
+﻿ALTER TABLE Content_TextContent
+ADD CONSTRAINT UK_Content_TextContent_TextContentID_ContentType
+UNIQUE (TextContentID, ContentType)

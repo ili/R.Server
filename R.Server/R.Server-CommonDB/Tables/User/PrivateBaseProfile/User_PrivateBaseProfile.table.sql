@@ -1,0 +1,7 @@
+﻿CREATE TABLE User_PrivateBaseProfile
+(
+	PrivateBaseProfileID UNIQUEIDENTIFIER NOT NULL,
+	ContentType INT NOT NULL,
+	UserID UNIQUEIDENTIFIER NOT NULL,
+	EMail VARCHAR(1024)
+);

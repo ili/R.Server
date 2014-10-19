@@ -1,0 +1,25 @@
+﻿<Window x:Class="R.Server.ManagerApp.Wpf.ServersFormWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Title="R.Server Manager servers"
+		Height="444"
+		Width="488"
+		WindowStartupLocation="CenterScreen">
+
+	<Window.CommandBindings>
+		<CommandBinding Command="ApplicationCommands.Close" Executed="CloseExecuted"/>
+	</Window.CommandBindings>
+	
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<ListBox Margin="4,4,4,4"/>
+
+		<StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft">
+			<Button Command="ApplicationCommands.Close">Close</Button>
+		</StackPanel>
+	</Grid>
+</Window>

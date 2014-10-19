@@ -1,0 +1,3 @@
+﻿ALTER TABLE User_User
+ADD CONSTRAINT UK_User_User_Nick
+UNIQUE (Nick)

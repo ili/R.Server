@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE User_DropPublicBaseProfile
+	@id UNIQUEIDENTIFIER
+AS
+	SET XACT_ABORT ON;
+	BEGIN TRANSACTION;
+
+	DELETE FROM User_PublicBaseProfile WHERE PublicBaseProfileID = @id;
+	EXECUTE Content_DropTextContent @id;
+
+	COMMIT TRANSACTION;
+RETURN 0;

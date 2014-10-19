@@ -1,0 +1,3 @@
+﻿ALTER TABLE Auth_PrincipalGroup
+ADD CONSTRAINT UK_Auth_PrincipalGroup_PrincipalID_GroupID
+UNIQUE (PrincipalID, GroupID)

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="R.Common.ObjectModel.User.Account">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectModel\User\Account.cs</FileName>
+      <HashCode>AAKAAAAJAAAAAEAAAoCAAAAAAgGAMEEAAAAQAAAAEAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Summary" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="InfoProperies" />
+      <Field Name="Logins" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="R.Common.ObjectModel.User.AccountProperty" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectModel\User\AccountProperty.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAgAgAARAAAAAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="R.Common.ObjectModel.User.AccountSummary" Collapsed="true">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectModel\User\AccountSummary.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgBAgAAAAAAABAAAAAEAABACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="R.Common.ObjectModel.User.WebLogin" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectModel\User\WebLogin.cs</FileName>
+      <HashCode>ECAAAAAAAAAAAAAAAgAAIQAAAAAAAQICAAAEAAQAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="R.Common.ObjectModel.User.WebSetting" Collapsed="true">
+    <Position X="6.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectModel\User\WebSetting.cs</FileName>
+      <HashCode>AAAAAAAAAAAAQAAAAgAAAQAAAAAAAAAAQAAEAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="R.Common.ObjectModel.User.ILogin" Collapsed="true">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectModel\User\ILogin.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAIQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="R.Common.ObjectModel.User.ITemplateSetting" Collapsed="true">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectModel\User\ITemplateSetting.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="R.Common.ObjectModel.User.IClientSetting" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectModel\User\IClientSetting.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

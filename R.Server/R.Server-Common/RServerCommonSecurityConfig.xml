@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns="http://rsdn.ru/R.SAT/ConfigSectionSchema.xsd">
+	<!--
+		Required variables:
+			EveryoneRole - everyone role name
+			AdministratorRole - administrator role name
+	-->
+	
+	<service-policy xmlns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd">
+		<service name="RServerInfo">
+			<allow>$(EveryoneRole)</allow>
+		</service>
+		<service name="TaskManager">
+			<allow>$(AdministratorRole)</allow>
+		</service>
+	</service-policy>
+</config>

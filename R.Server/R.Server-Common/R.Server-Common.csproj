@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21004</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C67ED6E5-7C3C-46B3-ABFC-35CA422A3851}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>R.Server.Common</RootNamespace>
+    <AssemblyName>R.Server.Common</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\AnonymousAuthenticationProvider.cs" />
+    <Compile Include="Auth\Authentication\RServerIdentity.cs" />
+    <Compile Include="Auth\AuthManager.cs" />
+    <Compile Include="Auth\Authentication\AuthenticationProviderRegStrategy.cs" />
+    <Compile Include="Auth\Authorization\AuthorizationProviderRegStrategy.cs" />
+    <Compile Include="Auth\Native\Auth.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Auth.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\WindowsAuth\IWindowsAuthConfig.cs" />
+    <Compile Include="Auth\WindowsAuth\WindowsAuthConfig.cs" />
+    <Compile Include="Auth\WindowsAuth\WindowsAuthenticationProvider.cs" />
+    <Compile Include="Communications\Policy\Elements\AllowAllPolicyElement.cs" />
+    <Compile Include="Communications\Policy\Elements\AllowAllPolicyAttribute.cs" />
+    <Compile Include="Communications\Policy\Elements\CombinedPolicyElement.cs" />
+    <Compile Include="Communications\Policy\ConfigStdPolicyManager.cs" />
+    <Compile Include="Communications\Policy\Config\ElementPolicyConfig.cs" />
+    <Compile Include="Communications\Policy\Config\IMethodPolicyConfig.cs" />
+    <Compile Include="Communications\Policy\Config\IServicePolicyConfig.cs" />
+    <Compile Include="Communications\Policy\Config\IStdCommPolicyConfig.cs" />
+    <Compile Include="Communications\Policy\Config\MethodPolicyConfig.cs" />
+    <Compile Include="Communications\Policy\Config\ServicePolicyConfig.cs" />
+    <Compile Include="Communications\Policy\Config\StdCommPolicyConfig.cs" />
+    <Compile Include="Communications\Policy\Elements\DenyAllPolicyElement.cs" />
+    <Compile Include="Communications\Policy\Elements\RoleBasedPolicyAttribute.cs" />
+    <Compile Include="Communications\Policy\Elements\RolesPolicyElement.cs" />
+    <Compile Include="Auth\Authorization\RServerPrincipal.cs" />
+    <Compile Include="Auth\Authorization\RServerWcfAuthorizationMgr.cs" />
+    <Compile Include="Auth\ConfigProvider\ConfigAuthenticationProvider.cs" />
+    <Compile Include="Auth\ConfigProvider\ConfigAuthorizationProvider.cs" />
+    <Compile Include="Auth\ConfigProvider\ConfigAuthProviderConfig.cs" />
+    <Compile Include="Auth\ConfigProvider\ConfigUser.cs" />
+    <Compile Include="Auth\ConfigProvider\IConfigAuthProviderConfig.cs" />
+    <Compile Include="Auth\ConfigProvider\IConfigUser.cs" />
+    <Compile Include="Auth\Native\NativeAuthorizationProvider.cs" />
+    <Compile Include="Auth\Policy\RegSecurityPolicyStrategy.cs" />
+    <Compile Include="Auth\Policy\SecurityPolicyManager.cs" />
+    <Compile Include="Communications\Policy\StandardCommPolicy.cs" />
+    <Compile Include="DB\AccessorBase.cs" />
+    <Compile Include="Auth\Native\INativeAuthConfig.cs" />
+    <Compile Include="Auth\Native\NativeAuthConfig.cs" />
+    <Compile Include="Auth\Native\NativeAuthenticationProvider.cs" />
+    <Compile Include="Auth\Native\NativeAuthAccessor.cs" />
+    <Compile Include="Auth\UserNamePasswordPair.cs" />
+    <Compile Include="Communications\CommServiceRegStrategy.cs" />
+    <Compile Include="Communications\CommServicesHost.cs" />
+    <Compile Include="Communications\CommSvcInstanceProvider.cs" />
+    <Compile Include="Communications\CommStrategiesFactory.cs" />
+    <Compile Include="Communications\RCommServiceAttribute.cs" />
+    <Compile Include="Communications\ServiceProviderExtension.cs" />
+    <Compile Include="Core\IRServerConfig.cs" />
+    <Compile Include="Core\IServerEndpointConfig.cs" />
+    <Compile Include="Core\RServerConfig.cs" />
+    <Compile Include="Core\RServerInfoService.cs" />
+    <Compile Include="Core\ServerEndpointConfig.cs" />
+    <Compile Include="DB\DBDriverRegStrategy.cs" />
+    <Compile Include="DB\DBHelper.cs" />
+    <Compile Include="DB\Manager\DBDescriptor.cs" />
+    <Compile Include="DB\Manager\DBManager.cs" />
+    <Compile Include="DB\Manager\DBManagerConfig.cs" />
+    <Compile Include="DB\Manager\IDBDescriptor.cs" />
+    <Compile Include="DB\Manager\IDBManagerConfig.cs" />
+    <Compile Include="DB\MSSqlDBDriver.cs" />
+    <Compile Include="Logging\Config\ILogTargetConfig.cs" />
+    <Compile Include="Logging\Config\ITargetParameterConfig.cs" />
+    <Compile Include="Logging\Config\LogTargetConfig.cs" />
+    <Compile Include="Logging\Config\TargetParameterConfig.cs" />
+    <Compile Include="Logging\ConsoleLogTarget.cs" />
+    <Compile Include="Logging\Config\ILoggerConfig.cs" />
+    <Compile Include="Logging\DB\DBLogTarget.cs" />
+    <Compile Include="Logging\DB\Log.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Log.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\DB\LogAccessor.cs" />
+    <Compile Include="Logging\FileLogTarget.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\Config\LoggerConfig.cs" />
+    <Compile Include="Logging\LogHelper.cs" />
+    <Compile Include="Logging\LogTargetsRegStrategy.cs" />
+    <Compile Include="Logging\TextWriterLogTarget.cs" />
+    <Compile Include="Logging\Windows\WindowsLogTarget.cs" />
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\RCommonStrategyFactory.cs" />
+    <Compile Include="Core\RServer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler\Config\ISchedulerJobParameterConfig.cs" />
+    <Compile Include="Scheduler\Config\SchedulerJobParameterConfig.cs" />
+    <Compile Include="Scheduler\CronPeriod.cs" />
+    <Compile Include="Scheduler\ScheduledTaskHost.cs" />
+    <Compile Include="Scheduler\SchedulerHost.cs" />
+    <Compile Include="Tasks\EchoTask.cs" />
+    <Compile Include="Tasks\TaskManager.cs" />
+    <Compile Include="Tasks\TaskManagerCommService.cs" />
+    <Compile Include="Tasks\TaskRegStrategy.cs" />
+    <Compile Include="Scheduler\Config\ISchedulerJobConfig.cs" />
+    <Compile Include="Scheduler\Config\ISchedulerConfig.cs" />
+    <Compile Include="Scheduler\Config\SchedulerJobConfig.cs" />
+    <Compile Include="Scheduler\Scheduler.cs" />
+    <Compile Include="Scheduler\Config\SchedulerConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\R.Common\R.Common.csproj">
+      <Project>{FB1AC185-BF11-413C-B3D0-CA519AA0B0E0}</Project>
+      <Name>R.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\R.SAT\R.SAT-Common\R.SAT-Common.csproj">
+      <Project>{7D9CAEC6-4973-4592-A321-54C9EFACA0F8}</Project>
+      <Name>R.SAT-Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\R.SAT\R.SAT-Model\R.SAT-Model.csproj">
+      <Project>{4F292719-A4B8-40EA-B90E-4EDB7D78E38B}</Project>
+      <Name>R.SAT-Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\R.Server-ClientCommon\R.Server-ClientCommon.csproj">
+      <Project>{AA3DD608-AD5C-4219-A0EB-7C6E41CEAB51}</Project>
+      <Name>R.Server-ClientCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\R.Server-ClientModel\R.Server-ClientModel.csproj">
+      <Project>{F81EAAD6-3794-416A-86A6-6BEE8DF6A102}</Project>
+      <Name>R.Server-ClientModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\R.Server-ServerModel\R.Server-ServerModel.csproj">
+      <Project>{AFC1DFED-DF0F-4BC1-8565-2A1D32D681E8}</Project>
+      <Name>R.Server-ServerModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Auth\Native\Auth.dbml.layout">
+      <DependentUpon>Auth.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Logging\Config\LoggerConfig.xsd">
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+    <None Include="Auth\Native\Auth.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Auth.designer.cs</LastGenOutput>
+      <CustomToolNamespace>R.Server.Common</CustomToolNamespace>
+    </None>
+    <None Include="Logging\DB\Log.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Log.designer.cs</LastGenOutput>
+      <CustomToolNamespace>R.Server.Common</CustomToolNamespace>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Logging\DB\Log.dbml.layout">
+      <DependentUpon>Log.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="RServerConfig.xsd">
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduler\Config\SchedulerConfig.xsd">
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RServerCommonSecurityConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,7 @@
+﻿CREATE TABLE Content_ContentType
+(
+	ContentTypeID UNIQUEIDENTIFIER NOT NULL,
+	ShortID INT NOT NULL IDENTITY,
+	ContentTypeName NVARCHAR(128) NOT NULL,
+	Description NTEXT
+);

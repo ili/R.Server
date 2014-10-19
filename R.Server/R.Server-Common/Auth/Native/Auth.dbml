@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="R.Server" EntityNamespace="R.Server.Common" ContextNamespace="R.Server.Common" Class="AuthDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Function Name="dbo.Auth_GetPasswordHash" Method="GetPasswordHash" IsComposable="true">
+    <Parameter Name="userName" Type="System.String" DbType="VarChar(64)" />
+    <Return Type="System.Byte[]" />
+  </Function>
+  <Function Name="dbo.Auth_GetLoginRoles" Method="GetLoginRoles" IsComposable="true">
+    <Parameter Name="authenType" Type="System.String" DbType="VarChar(64)" />
+    <Parameter Name="identityName" Type="System.String" DbType="VarChar(64)" />
+    <ElementType Name="GetLoginRolesResult">
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

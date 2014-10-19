@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<config xmlns="http://rsdn.ru/R.SAT/ConfigSectionSchema.xsd">
+
+	<var name="EveryoneRole">Everyone</var>
+	<var name="UserRole">Users</var>
+	<var name="AdministratorRole">Administrators</var>
+
+	<include>RServerCommonSecurityConfig.xml</include>
+
+	<!-- Server core configuration -->
+	<rserver xmlns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd">
+		<name>TestServer</name>
+		<description>Test R.Server instance</description>
+
+		<endpoint name="ExternalWS" transport="http" path="" port="8000">
+			<description>External HTTP protocol endpoint</description>
+		</endpoint>
+		<endpoint name="ExternalNet" transport="tcp" path="" port="8001">
+			<description>External TСP protocol endpoint</description>
+		</endpoint>
+		<endpoint name="InternalNet" transport="named-pipe" path="TestRServer">
+			<description>Internal named pipe protocol endpoint</description>
+		</endpoint>
+
+		<!-- Supported authentication types -->
+		<!-- Comment this to disable anonymous -->
+		<use-authentication>Anonymous</use-authentication>
+		<use-authentication>Config</use-authentication>
+		<use-authentication>Native</use-authentication>
+		<use-authentication>Windows</use-authentication>
+
+		<!-- Supported authorization types -->
+		<use-authorization>Config</use-authorization>
+		<!--<use-authorization>Native</use-authorization>-->
+
+		<comm-policy>Standard</comm-policy>
+
+		<extensions>
+			<!--<extension>TrafficTester-Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</extension>-->
+		</extensions>
+	</rserver>
+
+	<!-- Logger configuration -->
+	<logger xmlns="http://rsdn.ru/R.Server/Schemas/LoggerConfig.xsd">
+		<target name="Console"/>
+		<!--<target name="File"/>-->
+		<!--<target name="Database">
+			<param name="db-name">Main</param>
+		</target>-->
+		<!--<target name="Windows"/>-->
+	</logger>
+
+	<!-- Authentication & authorization configuration -->
+	<config-auth xmlns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd">
+		<!-- For creating password hashes use R.Server.PwdTool utility. -->
+		<all-users>
+			<role>$(EveryoneRole)</role>
+		</all-users>
+		<user name="TestUser" password-hash="N/omUzCtg+qoee+x4ttjgIls9jk="> <!-- password = pwd -->
+			<role>$(UserRole)</role>
+		</user>
+		<user name="TestUser2" password-hash="yItchBiX2v51zdn4upizLwB9a8M="/> <!-- password = pwd2 -->
+		<user name="TestAdmin" password-hash="AHDRRjD4AdIUOCwt4gG/g7SGR0c="> <!-- password = apwd -->
+			<role>$(UserRole)</role>
+			<role>$(AdministratorRole)</role>
+		</user>
+	</config-auth>
+
+	<native-auth xmlns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd">
+		<!-- Specify database name for log store.-->
+		<db-name>Main</db-name>
+	</native-auth>
+
+	<windows-auth xmlns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd">
+		<!-- Specify group, which members allowed to use 'Windows' authentication-->
+		<group>RServerUsers</group>
+	</windows-auth>
+
+	<!-- Standard communication policy -->
+	<service-policy xmlns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd">
+		<!-- Policy sample:
+		<server>
+			<allow>Role1</allow>
+		</server>
+		<service name="Svc1">
+			<allow>Role1</allow>
+			<allow>Role2</allow>
+		</service>
+		<service name="Svc2">
+			<allow>Role1</allow>
+			<method name="Foo">
+				<allow>Role2</allow>
+			</method>
+			<method name="Bar">
+				<allow>Role3</allow>
+			</method>
+		</serice>
+		-->
+		<server>
+			<allow>$(EveryoneRole)</allow>
+		</server>
+
+		<!--<service name="TrafficTestService">
+			<allow>$(EveryoneRole)</allow>
+		</service>-->
+	</service-policy>
+	
+	<!-- Database configuration -->
+	<db-manager xmlns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd">
+		<db name="Main" driver="MSSql">Data Source=.\DEV;Initial Catalog=R.Server;Integrated Security=True</db>
+	</db-manager>
+
+	<scheduler xmlns="http://rsdn.ru/R.Server/Schemas/SchedulerConfig.xsd">
+		<job task="Echo">
+			<!-- Cron format period -->
+			<period>*/2 * * * *</period>
+			<!-- task parameters -->
+			<param name="Message">EchoTask runned via scheduler</param>
+			<param name="Log"/>
+		</job>
+	</scheduler>
+</config>

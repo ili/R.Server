@@ -1,0 +1,19 @@
+﻿SET XACT_ABORT ON;
+BEGIN TRANSACTION;
+
+DECLARE @principal AS UNIQUEIDENTIFIER;
+SELECT @principal = '{440565C8-1C86-4ddb-97AF-9DB79F143D3C}';
+EXECUTE Auth_AddPrincipal @principal;
+
+DECLARE @user AS UNIQUEIDENTIFIER;
+SELECT @user = '{375AD070-3013-4d01-A4CB-C68EE8BB0B38}';
+INSERT INTO User_User VALUES(@user, @principal, 'Vasya Pupkin');
+
+EXECUTE User_AddPublicBaseProfile
+'{52527CAD-8737-4c6f-9EFA-FDA87D6582F5}',
+@user,
+'O La La',
+'Vasisualiy V Pupkin',
+'Muhosransk';
+
+COMMIT TRANSACTION;

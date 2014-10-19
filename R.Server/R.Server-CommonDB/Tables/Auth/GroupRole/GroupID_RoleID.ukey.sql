@@ -1,0 +1,3 @@
+﻿ALTER TABLE Auth_GroupRole
+ADD CONSTRAINT UK_GroupID_RoleID
+UNIQUE (GroupID, RoleID)

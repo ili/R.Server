@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE Content_DropTextContent
+	@id UNIQUEIDENTIFIER
+AS
+	SET XACT_ABORT ON;
+	BEGIN TRANSACTION;
+
+	DELETE FROM Content_TextContent WHERE TextContentID = @id;
+	DELETE FROM Content_Content WHERE ContentID = @id;
+
+	COMMIT TRANSACTION;
+RETURN 0;

@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE [dbo].[Auth_DropRole]
+		@id UNIQUEIDENTIFIER
+AS
+	SET XACT_ABORT ON;
+	BEGIN TRANSACTION;
+
+	DELETE FROM Auth_Role WHERE RoleID = @id;
+	DELETE FROM Auth_PermissionOwner WHERE PermissionOwnerID = @id;
+
+	COMMIT TRANSACTION;
+RETURN 0;

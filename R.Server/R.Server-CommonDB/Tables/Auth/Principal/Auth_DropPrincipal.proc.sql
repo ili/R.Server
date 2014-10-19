@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE Auth_DropPrincipal
+	@id UNIQUEIDENTIFIER
+AS
+	SET XACT_ABORT ON;
+	BEGIN TRANSACTION;
+
+	DELETE FROM Auth_Principal WHERE PrincipalID = @id;
+	DELETE FROM Auth_PermissionOwner WHERE PermissionOwnerID = @id;
+
+	COMMIT TRANSACTION;
+RETURN 0;

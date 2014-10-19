@@ -1,0 +1,2 @@
+﻿CREATE TYPE Log_SourceName
+	FROM NVARCHAR(255) NOT NULL;

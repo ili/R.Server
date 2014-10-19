@@ -1,0 +1,3 @@
+﻿ALTER TABLE Auth_Role
+	ADD CONSTRAINT [PK_Auth_Role]
+	PRIMARY KEY (RoleID)

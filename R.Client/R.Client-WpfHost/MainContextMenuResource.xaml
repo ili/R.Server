@@ -1,0 +1,25 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		x:Class="R.Client.WpfHost.MainContextMenuResource"
+		xmlns:host="clr-namespace:R.Client.WpfHost">
+
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="OriginalTheme.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+
+	<ContextMenu x:Key="MainContextMenu"
+			HasDropShadow="True">
+
+		<ContextMenu.CommandBindings>
+			<CommandBinding Command="ApplicationCommands.Close" Executed="AppExitExecuted"/>
+			<CommandBinding Command="{x:Static host:App.AboutCommand}" Executed="AboutExecuted"/>
+		</ContextMenu.CommandBindings>
+
+		<Separator/>
+
+		<MenuItem Header="About …" Command="{x:Static host:App.AboutCommand}"/>
+		<Separator/>
+		<MenuItem Header="Exit" Command="ApplicationCommands.Close"/>
+	</ContextMenu>
+	
+</ResourceDictionary>

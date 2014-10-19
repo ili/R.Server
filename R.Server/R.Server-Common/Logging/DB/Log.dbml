@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="R.Server" Class="LogDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Function Name="dbo.Log_AddEvent" Method="AddEvent">
+    <Parameter Name="eventDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="eventType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="eventImpotance" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sourceName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="message" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

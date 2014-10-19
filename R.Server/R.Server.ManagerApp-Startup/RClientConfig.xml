@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns="http://rsdn.ru/R.SAT/ConfigSectionSchema.xsd">
+	<client-config xmlns="http://rsdn.ru/R.Server/Schemas/ClientConfig.xsd">
+		<extensions>
+			<extension>R.Server.ManagerApp</extension>
+			<extension>R.Server.ManagerApp.Wpf</extension>
+		</extensions>
+	</client-config>
+	
+</config>

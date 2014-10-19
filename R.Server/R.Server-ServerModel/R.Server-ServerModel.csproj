@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.20404</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFC1DFED-DF0F-4BC1-8565-2A1D32D681E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>R.Server.ServerModel</RootNamespace>
+    <AssemblyName>R.Server-ServerModel</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\Authentication\AuthenticationProviderAttribute.cs" />
+    <Compile Include="Auth\Authentication\AuthenticationProviderInfo.cs" />
+    <Compile Include="Auth\Authorization\AuthorizationProviderAttribute.cs" />
+    <Compile Include="Auth\Authorization\AuthorizationProviderInfo.cs" />
+    <Compile Include="Auth\Authorization\IAuthorizationProvider.cs" />
+    <Compile Include="Auth\Authorization\IRServerIdentity.cs" />
+    <Compile Include="Auth\Authorization\IRServerPrincipal.cs" />
+    <Compile Include="Communications\ICommPolicyElement.cs" />
+    <Compile Include="Auth\IAuthManager.cs" />
+    <Compile Include="Auth\Policy\ISecurityPolicy.cs" />
+    <Compile Include="Auth\Policy\ISecurityPolicyManager.cs" />
+    <Compile Include="Auth\Policy\SecurityPolicyAttribute.cs" />
+    <Compile Include="Auth\Policy\SecurityPolicyInfo.cs" />
+    <Compile Include="Communications\CommPolicyContext.cs" />
+    <Compile Include="Communications\CommServiceAttribute.cs" />
+    <Compile Include="Communications\CommServiceInfo.cs" />
+    <Compile Include="Auth\Authentication\IAuthenticationProvider.cs" />
+    <Compile Include="Communications\ICommServicesHost.cs" />
+    <Compile Include="DB\DBDriverAttribute.cs" />
+    <Compile Include="DB\DBDriverInfo.cs" />
+    <Compile Include="DB\IDBDriver.cs" />
+    <Compile Include="DB\IDBManager.cs" />
+    <Compile Include="IRServer.cs" />
+    <Compile Include="IRServerHost.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\ILogTarget.cs" />
+    <Compile Include="Logging\LogEventImpotance.cs" />
+    <Compile Include="Logging\LogEventInfo.cs" />
+    <Compile Include="Logging\LogEventType.cs" />
+    <Compile Include="Logging\LogTargetAttribute.cs" />
+    <Compile Include="Logging\LogTargetInfo.cs" />
+    <Compile Include="Logging\TargetParameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\ITask.cs" />
+    <Compile Include="Tasks\ITaskManager.cs" />
+    <Compile Include="Tasks\TaskAttribute.cs" />
+    <Compile Include="Tasks\TaskInfo.cs" />
+    <Compile Include="Scheduler\IScheduler.cs" />
+    <Compile Include="Scheduler\ScheduledTaskMode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\R.SAT\R.SAT-Common\R.SAT-Common.csproj">
+      <Project>{7D9CAEC6-4973-4592-A321-54C9EFACA0F8}</Project>
+      <Name>R.SAT-Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\R.SAT\R.SAT-Model\R.SAT-Model.csproj">
+      <Project>{4F292719-A4B8-40EA-B90E-4EDB7D78E38B}</Project>
+      <Name>R.SAT-Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\R.Server-ClientModel\R.Server-ClientModel.csproj">
+      <Project>{F81EAAD6-3794-416A-86A6-6BEE8DF6A102}</Project>
+      <Name>R.Server-ClientModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

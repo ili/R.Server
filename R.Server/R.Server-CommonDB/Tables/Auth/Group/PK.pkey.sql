@@ -1,0 +1,3 @@
+﻿ALTER TABLE Auth_Group
+	ADD CONSTRAINT PK_Auth_Group
+	PRIMARY KEY (GroupID)

@@ -1,0 +1,6 @@
+﻿CREATE TABLE Auth_Group
+(
+	GroupID UNIQUEIDENTIFIER NOT NULL,
+	GroupName NVARCHAR(64) NOT NULL,
+	Description NTEXT
+);

@@ -1,0 +1,79 @@
+﻿<Window
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:host="clr-namespace:R.Client.WpfHost"
+		x:Class="R.Client.WpfHost.AboutWindow"
+		Title="About" Height="523" Width="560" WindowStyle="None" WindowStartupLocation="CenterScreen">
+
+	<Window.Resources>
+	</Window.Resources>
+
+	<Window.CommandBindings>
+		<CommandBinding Command="ApplicationCommands.Close" Executed="CloseExecuted"/>
+	</Window.CommandBindings>
+
+	<Window.InputBindings>
+		<KeyBinding Command="ApplicationCommands.Close" Key="Escape"/>
+	</Window.InputBindings>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Horizontal" Background="{StaticResource DarkGradBrush}">
+
+			<Image Width="160" Height="160" Margin="4,4,4,4" Source="../R.Logo.png"/>
+			<TextBlock VerticalAlignment="Top" FontSize="24" FontWeight="Bold">
+				<LineBreak/>
+				<TextBlock Text="{Binding Path=ProductName}"/>
+				<LineBreak/>
+				<TextBlock Text="{Binding Path=AppName}"/>
+				<LineBreak/>
+				<TextBlock FontSize="18" FontWeight="Normal">
+					Version : <TextBlock Text="{Binding Path=AppVersion}"/>
+				</TextBlock>
+				<LineBreak/>
+				<TextBlock FontSize="12" FontWeight="Normal" Text="{Binding Path=Copyright}"/>
+			</TextBlock>
+		</StackPanel>
+
+		<Grid Grid.Row="1">
+			<Grid.Background>
+				<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+					<GradientStop Color="{StaticResource DarkBack}" Offset="0"/>
+					<GradientStop Color="{StaticResource LightBack}" Offset="0.1"/>
+					<GradientStop Color="{StaticResource LightLightBack}" Offset="1"/>
+				</LinearGradientBrush>
+			</Grid.Background>
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+			<Rectangle Fill="{StaticResource LightLightBrush}" Height="4"/>
+
+			<TextBlock Grid.Row="1" Margin="8,8,8,0">Loaded extensions :</TextBlock>
+			
+			<ListBox
+					Grid.Row="2"
+					Background="{StaticResource LightLightBrush}"
+					Margin="8,8,8,0"
+					ItemsSource="{Binding Path=LoadedExtensions}">
+			</ListBox>
+
+			<StackPanel Grid.Row="3" FlowDirection="RightToLeft" HorizontalAlignment="Right">
+				<Button
+						IsDefault="True"
+						Command="ApplicationCommands.Close">
+					Close
+				</Button>
+			</StackPanel>
+		</Grid>
+		
+	</Grid>
+</Window>

@@ -1,0 +1,3 @@
+﻿ALTER TABLE Log_Source
+	ADD CONSTRAINT PK_Log_Source
+	PRIMARY KEY (SourceID)

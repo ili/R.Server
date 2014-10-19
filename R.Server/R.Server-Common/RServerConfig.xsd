@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="RServerConfigSchema"
+		targetNamespace="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd"
+		elementFormDefault="qualified"
+		xmlns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd"
+		xmlns:mstns="http://rsdn.ru/R.Server/Schemas/RServerConfig.xsd"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:cfg="http://rsdn.ru/R.SAT/ConfigSectionSchema.xsd">
+
+	<xs:simpleType name="req-string">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="rserver">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" minOccurs="1" maxOccurs="1" type="req-string"/>
+				<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string"/>
+
+				<xs:element name="endpoint" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+						<xs:attribute name="name" type="req-string" use="required"/>
+						<xs:attribute name="transport" type ="req-string" use="required"/>
+						<xs:attribute name="port" type="xs:integer" use="optional"/>
+						<xs:attribute name="path" type="xs:string" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="use-authentication" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="use-authorization" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+
+				<xs:element name="comm-policy" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+
+				<xs:element name="extensions" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="extension" type="req-string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="config-auth">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="all-users" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="role" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="own-users" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="role" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="role" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="name" type="req-string" use="required"/>
+						<xs:attribute name="provider" type="req-string" use="optional"/>
+						<xs:attribute name="password-hash" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="[A-Za-z0-9\+/=]{28}"/> <!-- See RFC 2045 for base64 encoding alphabet -->
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="native-auth">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="db-name" type="req-string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="windows-auth">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="1" name="group" type="req-string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="service-policy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="server" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="allow" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="allow" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="method" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="allow" type="req-string" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="name" type="req-string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="db-manager">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="db" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="req-string">
+								<xs:attribute name="name" type="req-string" use="required"/>
+								<xs:attribute name="driver" type="req-string" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
